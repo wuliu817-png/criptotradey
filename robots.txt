@@ -1,0 +1,14 @@
+# CriptoTradey - robots.txt
+# https://criptotradey.com/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://criptotradey.com/sitemap.xml
+
+# Desabilitar acesso a diretórios de assets (não precisam ser indexados)
+Disallow: /assets/
+
+# Crawl-delay (opcional, gentil com servidores)
+Crawl-delay: 3
