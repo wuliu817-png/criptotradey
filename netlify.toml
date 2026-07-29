@@ -1,0 +1,98 @@
+# CriptoTradey - Netlify Configuration
+# https://criptotradey.com
+
+[build]
+  publish = "."
+
+# === URL 美化：去掉 .html 后缀 ===
+# 访问 /artigos/bitcoin-guia-completo → 自动加载 bitcoin-guia-completo.html
+[[redirects]]
+  from = "/artigos/:slug"
+  to = "/artigos/:slug.html"
+  status = 200
+
+[[redirects]]
+  from = "/noticias"
+  to = "/noticias/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/guias"
+  to = "/guias/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/analise"
+  to = "/analise/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/artigos"
+  to = "/artigos/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/sobre"
+  to = "/sobre.html"
+  status = 200
+
+[[redirects]]
+  from = "/contato"
+  to = "/contato.html"
+  status = 200
+
+[[redirects]]
+  from = "/politica-de-privacidade"
+  to = "/politica-de-privacidade.html"
+  status = 200
+
+# === WWW → non-WWW 301 重定向（SEO规范化） ===
+[[redirects]]
+  from = "https://www.criptotradey.com/*"
+  to = "https://criptotradey.com/:splat"
+  status = 301
+  force = true
+
+# === SPA fallback / 404 ===
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
+
+# === 安全 & SEO Headers ===
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# HTML 页面缓存（短，内容常更新）
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+    Content-Type = "text/html; charset=utf-8"
+
+# CSS/JS 长期缓存（文件名带hash才改）
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, immutable"
+
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, immutable"
+
+# Sitemap & RSS
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/rss.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
