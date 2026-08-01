@@ -4,11 +4,10 @@
 ![Language](https://img.shields.io/badge/Lang-pt--BR-green?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Ativo-brightgreen?style=flat-square)
 
-**CriptoTradey** é um portal brasileiro de criptomoedas focado em educação, notícias e análises do mercado Bitcoin, altcoins, DeFi, NFTs e Web3. Conteúdo 100% em português.
+**CriptoTradey** é um portal brasileiro de criptomoedas focado em educação e análises do mercado Bitcoin, altcoins, DeFi, NFTs e Web3. Conteúdo 100% em português.
 
 ## 🚀 Funcionalidades
 
-- 📰 **Notícias atualizadas** sobre Bitcoin, altcoins, DeFi e Web3
 - 📚 **Guias completos** para iniciantes e investidores intermediários
 - 📊 **Análises de mercado** com dados técnicos e fundamentalistas
 - 🌐 **SEO otimizado** com Schema.org, Open Graph e RSS feed
@@ -45,7 +44,6 @@ criptotradey/
 │   ├── melhores-corretoras-cripto-2026.html
 │   ├── o-que-sao-altcoins.html
 │   └── como-analisar-criptomoedas.html
-├── noticias/                     # Categoria: Notícias
 ├── guias/                        # Categoria: Guias
 └── analise/                      # Categoria: Análise
 ```
