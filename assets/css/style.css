@@ -973,6 +973,52 @@ strong { font-weight: 600; color: var(--color-text-primary); }
   gap: var(--space-2);
 }
 
+/* Article Table of Contents (Sumário) */
+.article-toc {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+.article-toc .toc-title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin: 0 0 var(--space-4) 0;
+  padding: 0;
+  color: var(--color-text-primary);
+  border: none;
+}
+
+.article-toc ol {
+  list-style: decimal;
+  padding-left: var(--space-6);
+  margin: 0;
+}
+
+.article-toc li {
+  margin-bottom: var(--space-2);
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+
+.article-toc li:last-child {
+  margin-bottom: 0;
+}
+
+.article-toc a {
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.article-toc a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
 .article-body {
   font-size: var(--text-lg);
   line-height: 1.8;
