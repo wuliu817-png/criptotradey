@@ -329,9 +329,9 @@ strong { font-weight: 600; color: var(--color-text-primary); }
   background:
     linear-gradient(
       135deg,
-      rgba(26, 26, 46, 0.75) 0%,
-      rgba(26, 26, 46, 0.50) 40%,
-      rgba(22, 33, 62, 0.40) 100%
+      rgba(26, 26, 46, 0.55) 0%,
+      rgba(26, 26, 46, 0.35) 40%,
+      rgba(22, 33, 62, 0.25) 100%
     ),
     url('../images/hero-cover.png') center/cover no-repeat;
 }
