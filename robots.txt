@@ -12,3 +12,4 @@ Disallow: /assets/
 
 # Crawl-delay (opcional, gentil com servidores)
 Crawl-delay: 3
+ 
