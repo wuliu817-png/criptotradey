@@ -3,14 +3,11 @@
   <!-- Homepage -->
   <url>
     <loc>https://criptotradey.com/</loc>
-    <lastmod>2026-07-29</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-  <!-- Categoria: Guias -->
-  <url>
-    <loc>https://criptotradey.com/guias/</loc>
-    <lastmod>2026-07-29</lastmod>
+  <url><loc>https://criptotradey.com/guias/</loc><lastmod>2026-08-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -29,53 +26,26 @@
     <priority>0.8</priority>
   </url>
   <!-- Páginas Institucionais -->
-  <url>
-    <loc>https://criptotradey.com/sobre.html</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://criptotradey.com/contato.html</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://criptotradey.com/politica-de-privacidade.html</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <!-- Artigos -->
-  <url>
-    <loc>https://criptotradey.com/artigos/bitcoin-guia-completo.html</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://criptotradey.com/artigos/como-comprar-criptomoedas-brasil.html</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://criptotradey.com/artigos/melhores-corretoras-cripto-2026.html</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://criptotradey.com/artigos/o-que-sao-altcoins.html</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://criptotradey.com/artigos/como-analisar-criptomoedas.html</loc>
-    <lastmod>2026-07-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <url><loc>https://criptotradey.com/sobre.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://criptotradey.com/autor.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://criptotradey.com/contato.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://criptotradey.com/politica-de-privacidade.html</loc><lastmod>2026-08-02</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://criptotradey.com/termos.html</loc><lastmod>2026-08-02</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://criptotradey.com/disclaimer.html</loc><lastmod>2026-08-02</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+
+  <!-- Artigos - Tutoriais -->
+  <url><loc>https://criptotradey.com/artigos/binance-para-iniciantes.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://criptotradey.com/artigos/bitcoin-guia-completo.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://criptotradey.com/artigos/como-comprar-criptomoedas-brasil.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://criptotradey.com/artigos/melhores-corretoras-cripto-2026.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://criptotradey.com/artigos/o-que-sao-altcoins.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://criptotradey.com/artigos/carteiras-criptomoedas-guia.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://criptotradey.com/artigos/como-analisar-criptomoedas.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Artigos - Análises -->
+  <url><loc>https://criptotradey.com/artigos/analise-tecnica-bitcoin.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://criptotradey.com/artigos/metricas-on-chain-bitcoin.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://criptotradey.com/artigos/panorama-mercado-cripto-2026.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://criptotradey.com/artigos/top-10-altcoins-2026.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://criptotradey.com/artigos/defi-guia-2026.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
