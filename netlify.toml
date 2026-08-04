@@ -48,10 +48,15 @@
   status = 301
   force = true
 
-# === SPA fallback / 404 ===
+# === 404 — Página não encontrada ===
+[[redirects]]
+  from = "/404"
+  to = "/404.html"
+  status = 200
+
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/404.html"
   status = 404
 
 # === 安全 & SEO Headers ===
