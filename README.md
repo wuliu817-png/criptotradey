@@ -38,23 +38,26 @@ criptotradey/
 │   │   └── style.css            # Estilos globais
 │   └── js/
 │       └── main.js              # JavaScript
-├── artigos/                      # Artigos principais
-│   ├── bitcoin-guia-completo.html
-│   ├── como-comprar-criptomoedas-brasil.html
-│   ├── melhores-corretoras-cripto-2026.html
-│   ├── o-que-sao-altcoins.html
-│   └── como-analisar-criptomoedas.html
-├── guias/                        # Categoria: Guias
-└── analise/                      # Categoria: Análise
+├── artigos/                      # 13 artigos publicados
+├── guias/                        # Categoria: Guias (9 artigos)
+└── analise/                      # Categoria: Análise (5 artigos)
 ```
 
 ## 📝 Artigos Publicados
 
-1. **Bitcoin: O Guia Mais Completo para Iniciantes em 2026** — 12 min
-2. **Como Comprar Criptomoedas no Brasil: Passo a Passo** — 10 min
-3. **Melhores Corretoras de Criptomoedas no Brasil em 2026** — 15 min
-4. **O Que São Altcoins? Guia Completo para Iniciantes** — 9 min
-5. **Como Analisar Criptomoedas Antes de Investir** — 11 min
+1. **Como Declarar Criptomoedas no IR 2026: Guia Passo a Passo** — 12 min
+2. **Binance para Iniciantes 2026: Guia do Zero ao Trade** — 14 min
+3. **Carteiras de Criptomoedas: Qual a Melhor?** — 10 min
+4. **Análise Técnica do Bitcoin: Como Analisar Gráficos** — 10 min
+5. **Métricas On-Chain: Como Usar Dados da Blockchain** — 9 min
+6. **Panorama do Mercado Cripto 2026: Tendências** — 9 min
+7. **Top 10 Altcoins com Maior Potencial em 2026** — 11 min
+8. **DeFi em 2026: Como Ganhar Rendimentos com Cripto** — 10 min
+9. **Bitcoin: O Guia Mais Completo para Iniciantes em 2026** — 12 min
+10. **Como Comprar Criptomoedas no Brasil: Passo a Passo** — 10 min
+11. **Melhores Corretoras de Criptomoedas no Brasil em 2026** — 15 min
+12. **O Que São Altcoins? Guia Completo para Iniciantes** — 9 min
+13. **Como Analisar Criptomoedas Antes de Investir** — 11 min
 
 ## ⚠️ Aviso de Risco
 
