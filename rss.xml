@@ -5,8 +5,18 @@
     <link>https://criptotradey.com/</link>
     <description>Seu portal brasileiro de criptomoedas com guias e análises do mercado Bitcoin e altcoins.</description>
     <language>pt-BR</language>
-    <lastBuildDate>Mon, 29 Jul 2026 10:00:00 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 04 Aug 2026 10:00:00 -0300</lastBuildDate>
     <atom:link href="https://criptotradey.com/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>Como Declarar Criptomoedas no Imposto de Renda 2026: Guia Passo a Passo</title>
+      <link>https://criptotradey.com/artigos/como-declarar-criptomoedas-ir.html</link>
+      <description>Guia completo para declarar Bitcoin e criptomoedas no IR 2026: quem precisa, passo a passo da ficha Bens e Direitos, ganho de capital, GCAP, DARF, isenção de R$35 mil e multas. Com exemplos práticos.</description>
+      <author>contato@criptotradey.com (Ana Costa)</author>
+      <category>Imposto</category>
+      <guid isPermaLink="true">https://criptotradey.com/artigos/como-declarar-criptomoedas-ir.html</guid>
+      <pubDate>Mon, 04 Aug 2026 08:00:00 -0300</pubDate>
+    </item>
 
     <item>
       <title>Bitcoin: O Guia Mais Completo para Iniciantes em 2026</title>
