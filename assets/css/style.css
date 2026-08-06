@@ -899,6 +899,16 @@ strong { font-weight: 600; color: var(--color-text-primary); }
   line-height: 1.2;
 }
 
+.article-hero {
+  margin: 0 0 var(--space-6) 0;
+}
+
+.article-hero img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .article-summary {
   font-size: var(--text-lg);
   color: var(--color-text-secondary);
