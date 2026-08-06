@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Ganho de Capital Cripto 2026: Calcule o Imposto | CriptoTradey</title>
+  <meta name="description" content="Simulador de imposto sobre criptomoedas: calcule o ganho de capital (GCAP) segundo as regras da Receita Federal 2026. Isenção de R$35 mil, DARF e mais.">
+  <meta name="keywords" content="imposto criptomoedas, ganho de capital cripto, gcap, darf cripto, isenção 35 mil, como declarar bitcoin, imposto de renda cripto">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://criptotradey.com/ferramentas/simulador-imposto-cripto/">
+  <meta property="og:image" content="https://criptotradey.com/assets/images/hero-cover.jpg">
+  <meta name="twitter:image" content="https://criptotradey.com/assets/images/hero-cover.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Simulador de Ganho de Capital Cripto 2026">
+  <meta property="og:description" content="Calcule o imposto devido sobre seus lucros com criptomoedas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23F7931A'/><text x='50' y='68' font-size='55' font-weight='900' text-anchor='middle' fill='white'>C</text></svg>">
+
+  <style>
+    .tool-container { max-width: 960px; margin: 0 auto; padding: var(--space-6); }
+    .tool-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); }
+    @media (max-width:768px) { .tool-grid { grid-template-columns: 1fr; } }
+    .input-group { margin-bottom: var(--space-4); }
+    .input-group label { display: block; font-weight: 600; margin-bottom: var(--space-2); color: var(--color-text); }
+    .input-group input, .input-group select {
+      width: 100%; padding: 12px 16px; border: 2px solid var(--color-border);
+      border-radius: var(--radius-md); font-size: var(--text-base); background: var(--color-surface); color: var(--color-text);
+    }
+    .input-group input:focus, .input-group select:focus { outline: none; border-color: var(--color-primary); }
+    .input-group .hint { font-size: var(--text-xs); color: var(--color-text-secondary); margin-top: var(--space-1); }
+    .results { padding: var(--space-6); background: var(--color-surface); border-radius: var(--radius-lg); }
+    .result-row { display: flex; justify-content: space-between; padding: var(--space-3) 0; border-bottom: 1px solid var(--color-border); }
+    .result-row:last-child { border-bottom: none; }
+    .result-label { color: var(--color-text-secondary); }
+    .result-value { font-weight: 700; font-size: var(--text-lg); }
+    .result-value.green { color: #27ae60; } .result-value.red { color: #e74c3c; } .result-value.orange { color: #f39c12; }
+    .btn-calculate { width: 100%; padding: 14px; background: var(--color-primary); color: #fff; border: none; border-radius: var(--radius-md); font-size: var(--text-lg); font-weight: 700; cursor: pointer; transition: all var(--transition-base); }
+    .btn-calculate:hover { opacity: 0.9; transform: translateY(-1px); }
+    .alert { padding: var(--space-4); border-radius: var(--radius-md); margin: var(--space-4) 0; font-weight: 600; }
+    .alert-success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+    .alert-warning { background: #fff3cd; color: #856404; border: 1px solid #ffeaa7; }
+    .alert-danger { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+    .rules-box { padding: var(--space-6); background: var(--color-surface); border-radius: var(--radius-lg); margin-top: var(--space-8); }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="CriptoTradey — Página Inicial">
+        <div class="logo-icon">C</div>
+        <div class="logo-text">Cripto<span>Tradey</span></div>
+      </a>
+      <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navegação Principal">
+        <a href="/">Início</a>
+        <a href="/guias/">Guias</a>
+        <a href="/analise/">Análise</a>
+        <a href="/artigos/">Artigos</a>
+        <a href="/ferramentas/" class="active">Ferramentas</a>
+        <a href="/sobre.html">Sobre</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro"><span class="theme-icon">🌙</span></button>
+        <a href="/index.html#newsletter" class="btn-subscribe">📬 Inscrever-se</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="article-container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Início</a> <span class="separator">›</span>
+      <a href="/ferramentas/">Ferramentas</a> <span class="separator">›</span>
+      <span>Simulador de Imposto Cripto</span>
+    </nav>
+  </div>
+
+  <main id="main-content">
+    <section class="page-header" style="background:linear-gradient(135deg,rgba(99,102,241,0.2) 0%,rgba(99,102,241,0.08) 40%,rgba(22,33,62,0.1) 100%);">
+      <div class="container">
+        <h1>📝 Simulador de Ganho de Capital Cripto</h1>
+        <p>Calcule o imposto devido sobre seus lucros com criptomoedas — regras da Receita Federal 2026</p>
+      </div>
+    </section>
+
+    <div class="tool-container">
+      <div class="tool-grid">
+        <div>
+          <h2 style="margin-bottom:var(--space-5);">Dados da Operação</h2>
+          <div class="input-group">
+            <label>Tipo de Exchange</label>
+            <select id="exchangeType">
+              <option value="estrangeira">Exchange Estrangeira (Binance, Bybit, etc.)</option>
+              <option value="nacional">Exchange Nacional (Mercado Bitcoin, NovaDAX, etc.)</option>
+            </select>
+            <span class="hint">Afeta a regra de isenção de R$35.000/mês</span>
+          </div>
+          <div class="input-group">
+            <label>Valor Total da Compra (R$)</label>
+            <input type="number" id="buyValue" value="10000" min="0" step="100" placeholder="Ex: 10000">
+            <span class="hint">Quanto você pagou pelas criptomoedas (incluindo taxas)</span>
+          </div>
+          <div class="input-group">
+            <label>Valor Total da Venda (R$)</label>
+            <input type="number" id="sellValue" value="25000" min="0" step="100" placeholder="Ex: 25000">
+            <span class="hint">Quanto você recebeu pela venda (já descontadas taxas)</span>
+          </div>
+          <div class="input-group">
+            <label>Volume Total de Vendas no Mês (R$)</label>
+            <input type="number" id="monthlyVolume" value="25000" min="0" step="100" placeholder="Ex: 25000">
+            <span class="hint">Soma de TODAS as vendas de cripto neste mês. Se for sua única venda, use o mesmo valor acima.</span>
+          </div>
+          <button class="btn-calculate" onclick="calculateTax()">💰 Calcular Imposto</button>
+        </div>
+
+        <div>
+          <h2 style="margin-bottom:var(--space-5);">📊 Resultado</h2>
+          <div class="results" id="results">
+            <p style="color:var(--color-text-secondary);text-align:center;padding:var(--space-8);">Preencha os dados e clique em <strong>Calcular Imposto</strong>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rules-box">
+        <h3>📋 Regras do Imposto sobre Criptomoedas (2026)</h3>
+        <table class="comparison-table" style="width:100%;border-collapse:collapse;margin-top:var(--space-4);font-size:var(--text-sm);">
+          <thead><tr style="background:var(--color-primary);color:#fff;"><th style="padding:10px;text-align:left;">Regra</th><th style="padding:10px;text-align:left;">Detalhe</th></tr></thead>
+          <tbody>
+            <tr><td style="padding:8px;"><strong>Isenção Mensal</strong></td><td style="padding:8px;">Vendas de até <strong>R$ 35.000/mês</strong> em exchange estrangeira são isentas de imposto sobre o lucro. Em exchange nacional, a isenção também se aplica.</td></tr>
+            <tr><td style="padding:8px;"><strong>Alíquota</strong></td><td style="padding:8px;">15% sobre o lucro (ganho de capital) para vendas acima de R$ 35 mil no mês. Alíquotas progressivas para ganhos muito altos (até 22,5%).</td></tr>
+            <tr><td style="padding:8px;"><strong>GCAP</strong></td><td style="padding:8px;">Programa de Ganho de Capital da Receita Federal. Deve ser preenchido mensalmente se houve venda acima de R$ 35 mil.</td></tr>
+            <tr><td style="padding:8px;"><strong>DARF</strong></td><td style="padding:8px;">Imposto deve ser pago via DARF até o <strong>último dia útil do mês seguinte</strong> à venda.</td></tr>
+            <tr><td style="padding:8px;"><strong>Declaração IR</strong></td><td style="padding:8px;">Mesmo isento, declare seus criptoativos na ficha de Bens e Direitos do IR anual se o valor de aquisição for superior a R$ 5.000.</td></tr>
+            <tr><td style="padding:8px;"><strong>Prejuízo</strong></td><td style="padding:8px;">Pode ser compensado com lucros futuros do mesmo tipo de ativo, reduzindo o imposto a pagar.</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:var(--space-4);">👉 Guia completo: <a href="/artigos/como-declarar-criptomoedas-ir.html">Como Declarar Criptomoedas no IR 2026</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about"><h3>Cripto<span>Tradey</span></h3><p>Seu portal brasileiro de criptomoedas.</p></div>
+        <div class="footer-col"><h4>Ferramentas</h4><ul><li><a href="/ferramentas/calculadora-dca/">Calculadora DCA</a></li><li><a href="/ferramentas/comparador-taxas/">Comparador de Taxas</a></li><li><a href="/ferramentas/simulador-imposto-cripto/">Simulador de Imposto</a></li><li><a href="/glossario/">Glossário A-Z</a></li></ul></div>
+        <div class="footer-col"><h4>Institucional</h4><ul><li><a href="/sobre.html">Sobre</a></li><li><a href="/contato.html">Contato</a></li></ul></div>
+        <div class="footer-col"><h4>Legal</h4><ul><li><a href="/politica-de-privacidade.html">Privacidade</a></li><li><a href="/termos.html">Termos</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>© 2026 CriptoTradey. Todos os direitos reservados.</p></div>
+      <div class="footer-bottom" style="margin-top:var(--space-4);"><p style="color:rgba(255,255,255,0.4);font-size:var(--text-xs);max-width:700px;"><strong>Aviso Importante:</strong> Este simulador tem finalidade educacional. As regras fiscais podem mudar. Consulte um contador para orientação específica sobre sua situação.</p></div>
+    </div>
+  </footer>
+
+  <button id="backToTop" style="position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:var(--color-primary);color:#fff;border:none;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all var(--transition-base);z-index:999;box-shadow:var(--shadow-md);" aria-label="Voltar ao topo">↑</button>
+
+  <script src="../../assets/js/main.js"></script>
+  <style>#backToTop.visible{opacity:1!important;visibility:visible!important;}</style>
+
+  <script>
+    function formatBRL(n) { return n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); }
+
+    function calculateTax() {
+      const exchangeType = document.getElementById('exchangeType').value;
+      const buyValue = parseFloat(document.getElementById('buyValue').value) || 0;
+      const sellValue = parseFloat(document.getElementById('sellValue').value) || 0;
+      const monthlyVolume = parseFloat(document.getElementById('monthlyVolume').value) || 0;
+
+      const profit = sellValue - buyValue;
+      const isProfit = profit > 0;
+      const isIsento = monthlyVolume <= 35000;
+      const taxRate = 0.15;
+      const taxDue = isProfit && !isIsento ? profit * taxRate : 0;
+
+      // Determine alert
+      let alertHTML = '';
+      if (!isProfit) {
+        alertHTML = '<div class="alert alert-success">✅ <strong>Sem lucro tributável.</strong> Você vendeu por um valor menor ou igual ao de compra. Nenhum imposto devido. Prejuízos podem ser compensados em meses futuros.</div>';
+      } else if (isIsento) {
+        alertHTML = `<div class="alert alert-success">🎉 <strong>Isento!</strong> Seu volume mensal de vendas (${formatBRL(monthlyVolume)}) está abaixo do limite de ${formatBRL(35000)}. Nenhum imposto devido sobre o lucro de ${formatBRL(profit)}.</div>`;
+      } else {
+        alertHTML = `<div class="alert alert-danger">⚠️ <strong>Imposto Devido!</strong> Seu volume mensal (${formatBRL(monthlyVolume)}) ultrapassou o limite de isenção de ${formatBRL(35000)}. O imposto de 15% incide sobre o lucro.</div>`;
+      }
+
+      document.getElementById('results').innerHTML = `
+        ${alertHTML}
+        <div class="result-row"><span class="result-label">Valor da Compra</span><span class="result-value">${formatBRL(buyValue)}</span></div>
+        <div class="result-row"><span class="result-label">Valor da Venda</span><span class="result-value">${formatBRL(sellValue)}</span></div>
+        <div class="result-row"><span class="result-label">Lucro (Ganho de Capital)</span><span class="result-value ${isProfit ? 'green' : 'red'}">${formatBRL(Math.abs(profit))} ${isProfit ? '(lucro)' : '(prejuízo)'}</span></div>
+        <div class="result-row"><span class="result-label">Volume Mensal de Vendas</span><span class="result-value ${isIsento ? 'green' : 'red'}">${formatBRL(monthlyVolume)} ${isIsento ? '(isento)' : '(tributável)'}</span></div>
+        <div class="result-row"><span class="result-label">Alíquota</span><span class="result-value orange">${isIsento ? '0% (isento)' : '15%'}</span></div>
+        <div class="result-row"><span class="result-label">Imposto a Pagar (DARF)</span><span class="result-value ${taxDue > 0 ? 'red' : 'green'}">${formatBRL(taxDue)}</span></div>
+        <div style="margin-top:var(--space-4);padding:var(--space-3);background:${taxDue > 0 ? '#fff3cd' : '#d4edda'};border-radius:var(--radius-md);font-size:var(--text-sm);">
+          ${taxDue > 0
+            ? `<strong>📅 Ação necessária:</strong> Gere o DARF no site da Receita Federal e pague até o último dia útil do mês seguinte. Código de receita: <strong>4600</strong> (Ganho de Capital na Alienação de Bens).`
+            : `<strong>✅ Sem ação imediata.</strong> Mas não esqueça de declarar seus criptoativos no IR anual se o valor total for superior a R$ 5.000.`
+          }
+        </div>
+      `;
+    }
+
+    calculateTax();
+  </script>
+</body>
+</html>

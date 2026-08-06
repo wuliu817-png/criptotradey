@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de DCA Bitcoin 2026: Simule Investimentos Recorrentes | CriptoTradey</title>
+  <meta name="description" content="Simule sua estratégia DCA (Dollar Cost Averaging) de Bitcoin. Veja quanto BTC você acumularia investindo um valor fixo todo mês, com projeções realistas.">
+  <meta name="keywords" content="calculadora dca bitcoin, dolar cost averaging bitcoin, simular investimento bitcoin, comprar bitcoin todo mês, dca criptomoedas">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://criptotradey.com/ferramentas/calculadora-dca/">
+  <meta property="og:image" content="https://criptotradey.com/assets/images/hero-cover.jpg">
+  <meta name="twitter:image" content="https://criptotradey.com/assets/images/hero-cover.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Calculadora de DCA Bitcoin 2026">
+  <meta property="og:description" content="Simule quanto Bitcoin você acumularia com investimentos mensais.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23F7931A'/><text x='50' y='68' font-size='55' font-weight='900' text-anchor='middle' fill='white'>C</text></svg>">
+
+  <style>
+    .tool-container { max-width: 960px; margin: 0 auto; padding: var(--space-6); }
+    .tool-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); margin-bottom: var(--space-8); }
+    @media (max-width: 768px) { .tool-grid { grid-template-columns: 1fr; } }
+    .input-group { margin-bottom: var(--space-4); }
+    .input-group label { display: block; font-weight: 600; margin-bottom: var(--space-2); color: var(--color-text); }
+    .input-group input, .input-group select {
+      width: 100%; padding: 12px 16px; border: 2px solid var(--color-border);
+      border-radius: var(--radius-md); font-size: var(--text-base); background: var(--color-surface);
+      color: var(--color-text); transition: border-color var(--transition-base);
+    }
+    .input-group input:focus, .input-group select:focus { outline: none; border-color: var(--color-primary); }
+    .input-group .hint { font-size: var(--text-xs); color: var(--color-text-secondary); margin-top: var(--space-1); }
+    .results { padding: var(--space-6); background: var(--color-surface); border-radius: var(--radius-lg); }
+    .result-row { display: flex; justify-content: space-between; padding: var(--space-3) 0; border-bottom: 1px solid var(--color-border); }
+    .result-row:last-child { border-bottom: none; }
+    .result-label { color: var(--color-text-secondary); }
+    .result-value { font-weight: 700; font-size: var(--text-lg); color: var(--color-primary); }
+    .btn-calculate {
+      width: 100%; padding: 14px; background: var(--color-primary); color: #fff; border: none;
+      border-radius: var(--radius-md); font-size: var(--text-lg); font-weight: 700; cursor: pointer;
+      transition: all var(--transition-base); margin-top: var(--space-4);
+    }
+    .btn-calculate:hover { opacity: 0.9; transform: translateY(-1px); }
+    .chart-bar { height: 24px; background: var(--color-primary); border-radius: 12px; transition: width 0.5s; min-width: 4px; }
+    .chart-row { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-2); }
+    .chart-label { width: 50px; text-align: right; font-size: var(--text-xs); color: var(--color-text-secondary); }
+    .chart-value { font-size: var(--text-xs); color: var(--color-text); min-width: 80px; }
+    table { width: 100%; border-collapse: collapse; margin-top: var(--space-6); font-size: var(--text-sm); }
+    th { background: var(--color-primary); color: #fff; padding: 10px 12px; text-align: left; }
+    td { padding: 8px 12px; border-bottom: 1px solid var(--color-border); }
+    tr:nth-child(even) { background: var(--color-surface); }
+    .section-divider { border-top: 2px solid var(--color-border); margin: var(--space-8) 0; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="CriptoTradey — Página Inicial">
+        <div class="logo-icon">C</div>
+        <div class="logo-text">Cripto<span>Tradey</span></div>
+      </a>
+      <nav class="main-nav" id="mainNav" role="navigation" aria-label="Navegação Principal">
+        <a href="/">Início</a>
+        <a href="/guias/">Guias</a>
+        <a href="/analise/">Análise</a>
+        <a href="/artigos/">Artigos</a>
+        <a href="/ferramentas/" class="active">Ferramentas</a>
+        <a href="/sobre.html">Sobre</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro"><span class="theme-icon">🌙</span></button>
+        <a href="/index.html#newsletter" class="btn-subscribe">📬 Inscrever-se</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="article-container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Início</a> <span class="separator">›</span>
+      <a href="/ferramentas/">Ferramentas</a> <span class="separator">›</span>
+      <span>Calculadora de DCA Bitcoin</span>
+    </nav>
+  </div>
+
+  <main id="main-content">
+    <section class="page-header" style="background: linear-gradient(135deg, rgba(247,147,26,0.2) 0%, rgba(247,147,26,0.08) 40%, rgba(22,33,62,0.1) 100%);">
+      <div class="container">
+        <h1>₿ Calculadora de DCA Bitcoin</h1>
+        <p>Simule quanto Bitcoin você acumularia investindo um valor fixo todo mês</p>
+      </div>
+    </section>
+
+    <div class="tool-container">
+      <div class="tool-grid">
+        <div>
+          <h2 style="margin-bottom:var(--space-5);">Configure sua Simulação</h2>
+          <div class="input-group">
+            <label>Investimento Mensal (R$)</label>
+            <input type="number" id="monthlyAmount" value="500" min="50" step="50" placeholder="Ex: 500">
+            <span class="hint">Quanto você investiria em BTC todo mês</span>
+          </div>
+          <div class="input-group">
+            <label>Período (meses)</label>
+            <input type="number" id="months" value="12" min="1" max="60" placeholder="Ex: 12">
+            <span class="hint">Por quantos meses você manteria a estratégia</span>
+          </div>
+          <div class="input-group">
+            <label>Preço Atual do Bitcoin (R$)</label>
+            <input type="number" id="btcPrice" value="520000" min="50000" step="1000" placeholder="Ex: 520000">
+            <span class="hint">Preço atual de referência do BTC em Reais</span>
+          </div>
+          <div class="input-group">
+            <label>Variação Mensal Média Estimada (%)</label>
+            <input type="number" id="monthlyChange" value="2" min="-10" max="20" step="0.5" placeholder="Ex: 2">
+            <span class="hint">Estimativa de variação mensal. Histórico: ~2-3% ao mês em ciclos de alta; negativo em bear markets</span>
+          </div>
+          <button class="btn-calculate" onclick="calculate()">📊 Calcular DCA</button>
+        </div>
+
+        <div>
+          <h2 style="margin-bottom:var(--space-5);">📊 Resultado</h2>
+          <div class="results" id="results">
+            <p style="color:var(--color-text-secondary);text-align:center;padding:var(--space-8);">Preencha os dados e clique em <strong>Calcular DCA</strong> para ver a simulação.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <h2 style="margin-bottom:var(--space-5);">📈 Projeção Mês a Mês</h2>
+      <div style="overflow-x:auto;" id="tableContainer">
+        <p style="color:var(--color-text-secondary);text-align:center;padding:var(--space-6);">Os resultados aparecerão aqui após o cálculo.</p>
+      </div>
+
+      <div style="margin-top:var(--space-8);padding:var(--space-6);background:var(--color-surface);border-radius:var(--radius-lg);">
+        <h3>📖 O que é DCA (Dollar Cost Averaging)?</h3>
+        <p>DCA é uma estratégia onde você investe o <strong>mesmo valor em Reais todo mês</strong>, independentemente do preço do Bitcoin. Quando o BTC está barato, você compra mais. Quando está caro, você compra menos. No longo prazo, isso reduz o impacto da volatilidade e evita o erro de tentar "acertar o timing" do mercado.</p>
+        <p style="margin-top:var(--space-3);">👉 Para começar com Bitcoin, use a <a href="https://www.binance.com/zh-CN/join?ref=BN522" target="_blank" rel="noopener">Binance (código BN522)</a> e configure compras recorrentes automáticas.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3>Cripto<span>Tradey</span></h3>
+          <p>Seu portal brasileiro de criptomoedas. Guias, análises e conteúdo educativo sobre Bitcoin, altcoins, DeFi e Web3.</p>
+        </div>
+        <div class="footer-col"><h4>Ferramentas</h4><ul><li><a href="/ferramentas/calculadora-dca/">Calculadora DCA</a></li><li><a href="/ferramentas/comparador-taxas/">Comparador de Taxas</a></li><li><a href="/ferramentas/simulador-imposto-cripto/">Simulador de Imposto</a></li><li><a href="/glossario/">Glossário A-Z</a></li></ul></div>
+        <div class="footer-col"><h4>Institucional</h4><ul><li><a href="/sobre.html">Sobre</a></li><li><a href="/contato.html">Contato</a></li></ul></div>
+        <div class="footer-col"><h4>Legal</h4><ul><li><a href="/politica-de-privacidade.html">Privacidade</a></li><li><a href="/termos.html">Termos</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>© 2026 CriptoTradey. Todos os direitos reservados.</p></div>
+      <div class="footer-bottom" style="margin-top:var(--space-4);"><p style="color:rgba(255,255,255,0.4);font-size:var(--text-xs);max-width:700px;"><strong>Aviso:</strong> Esta calculadora é uma simulação educacional. Resultados passados não garantem retornos futuros. Criptomoedas são investimentos de alto risco.</p></div>
+    </div>
+  </footer>
+
+  <button id="backToTop" style="position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:var(--color-primary);color:#fff;border:none;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all var(--transition-base);z-index:999;box-shadow:var(--shadow-md);" aria-label="Voltar ao topo">↑</button>
+
+  <script src="../../assets/js/main.js"></script>
+  <style>#backToTop.visible{opacity:1!important;visibility:visible!important;}</style>
+
+  <script>
+    function formatBRL(n) { return n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); }
+    function formatBTC(n) { return n.toFixed(8) + ' BTC'; }
+
+    function calculate() {
+      const monthly = parseFloat(document.getElementById('monthlyAmount').value) || 500;
+      const months = parseInt(document.getElementById('months').value) || 12;
+      const startPrice = parseFloat(document.getElementById('btcPrice').value) || 520000;
+      const changePct = parseFloat(document.getElementById('monthlyChange').value) || 2;
+
+      let totalInvested = 0, totalBTC = 0, price = startPrice;
+      const rows = [];
+
+      for (let m = 1; m <= months; m++) {
+        const btcBought = monthly / price;
+        totalInvested += monthly;
+        totalBTC += btcBought;
+        rows.push({ month: m, price, invested: monthly, btcBought, totalBTC, totalInvested, valueBRL: totalBTC * price });
+        price *= (1 + changePct / 100);
+      }
+
+      const finalValue = totalBTC * price;
+      const avgPrice = totalInvested / totalBTC;
+      const roi = ((finalValue - totalInvested) / totalInvested) * 100;
+
+      document.getElementById('results').innerHTML = `
+        <div class="result-row"><span class="result-label">Total Investido</span><span class="result-value">${formatBRL(totalInvested)}</span></div>
+        <div class="result-row"><span class="result-label">BTC Acumulado</span><span class="result-value">${formatBTC(totalBTC)}</span></div>
+        <div class="result-row"><span class="result-label">Preço Médio do BTC</span><span class="result-value">${formatBRL(avgPrice)}</span></div>
+        <div class="result-row"><span class="result-label">Valor Final Estimado</span><span class="result-value">${formatBRL(finalValue)}</span></div>
+        <div class="result-row"><span class="result-label">ROI Estimado</span><span class="result-value" style="color:${roi >= 0 ? '#27ae60' : '#e74c3c'}">${roi.toFixed(1)}%</span></div>
+        <div class="result-row"><span class="result-label">Preço Final do BTC</span><span class="result-value">${formatBRL(price)}</span></div>
+      `;
+
+      let tableHTML = `<table><thead><tr><th>Mês</th><th>Preço BTC</th><th>Investido</th><th>BTC Comprado</th><th>Total BTC</th><th>Total Inv.</th><th>Valor (R$)</th><th></th></tr></thead><tbody>`;
+      const maxBTC = Math.max(...rows.map(r => r.btcBought));
+      rows.forEach(r => {
+        const barWidth = (r.btcBought / maxBTC) * 100;
+        tableHTML += `<tr>
+          <td>${r.month}º</td><td>${formatBRL(r.price)}</td><td>${formatBRL(r.invested)}</td>
+          <td>${formatBTC(r.btcBought)}</td><td>${formatBTC(r.totalBTC)}</td>
+          <td>${formatBRL(r.totalInvested)}</td><td>${formatBRL(r.valueBRL)}</td>
+          <td><div class="chart-bar" style="width:${barWidth}%;min-width:4px;" title="${r.btcBought.toFixed(8)} BTC"></div></td>
+        </tr>`;
+      });
+      tableHTML += '</tbody></table>';
+
+      document.getElementById('tableContainer').innerHTML = tableHTML;
+    }
+
+    // Auto-calculate on load
+    calculate();
+  </script>
+</body>
+</html>

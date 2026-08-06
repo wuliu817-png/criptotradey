@@ -35,6 +35,15 @@
 
   <!-- Artigos - Tutoriais -->
   <url><loc>https://criptotradey.com/artigos/seguranca-binance-10-dicas.html</loc><lastmod>2026-08-06</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- Ferramentas -->
+  <url><loc>https://criptotradey.com/ferramentas/</loc><lastmod>2026-08-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://criptotradey.com/ferramentas/calculadora-dca/</loc><lastmod>2026-08-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://criptotradey.com/ferramentas/comparador-taxas/</loc><lastmod>2026-08-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://criptotradey.com/ferramentas/simulador-imposto-cripto/</loc><lastmod>2026-08-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Glossário -->
+  <url><loc>https://criptotradey.com/glossario/</loc><lastmod>2026-08-06</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://criptotradey.com/artigos/binance-earn-staking.html</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://criptotradey.com/artigos/como-declarar-criptomoedas-ir.html</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://criptotradey.com/artigos/binance-para-iniciantes.html</loc><lastmod>2026-08-02</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
