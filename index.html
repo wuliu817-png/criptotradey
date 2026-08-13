@@ -110,7 +110,7 @@
         <div class="hero-stats">
           <div class="hero-stat">
             <div class="stat-icon">📝</div>
-            <div class="stat-number">21+</div>
+            <div class="stat-number" id="articleCount">21+</div>
             <div class="stat-label">Artigos Publicados</div>
           </div>
           <div class="hero-stat">
@@ -615,6 +615,24 @@
 
   <!-- JavaScript -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Contagem automática de artigos publicados -->
+  <script>
+    (function () {
+      var el = document.getElementById('articleCount');
+      if (!el) return;
+      fetch('/sitemap.xml')
+        .then(function (r) { return r.text(); })
+        .then(function (xml) {
+          var n = (xml.match(/artigos\/[a-z0-9-]+\.html/g) || [])
+            .filter(function (u) { return u.indexOf('index.html') === -1; })
+            .filter(function (u, i, a) { return a.indexOf(u) === i; })
+            .length;
+          if (n > 0) el.textContent = n + '+';
+        })
+        .catch(function () { /* mantém o valor de fallback */ });
+    })();
+  </script>
 
   <style>
     /* Back to Top visibility */
