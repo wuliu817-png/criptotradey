@@ -127,22 +127,22 @@
       </div>
     </section>
 
-    <!-- Market Ticker -->
+    <!-- Market Ticker (cotações atualizadas via CoinGecko; valores abaixo são o fallback) -->
     <div class="ticker-bar" aria-label="Cotações de Referência">
       <div class="ticker-track">
-        <div class="ticker-item">₿ Bitcoin <strong class="ticker-price">R$ 512.400</strong> <span class="ticker-change positive">+2.3%</span></div>
-        <div class="ticker-item">Ξ Ethereum <strong class="ticker-price">R$ 18.250</strong> <span class="ticker-change positive">+1.8%</span></div>
-        <div class="ticker-item">◎ Solana <strong class="ticker-price">R$ 1.120</strong> <span class="ticker-change positive">+5.2%</span></div>
-        <div class="ticker-item">◆ BNB <strong class="ticker-price">R$ 2.980</strong> <span class="ticker-change negative">-0.7%</span></div>
-        <div class="ticker-item">X XRP <strong class="ticker-price">R$ 6.00</strong> <span class="ticker-change negative">-1.4%</span></div>
-        <div class="ticker-item">₮ USDT <strong class="ticker-price">R$ 5.76</strong> <span class="ticker-change positive">+0.05%</span></div>
+        <div class="ticker-item" data-coin="bitcoin">₿ Bitcoin <strong class="ticker-price">R$ 328.888</strong> <span class="ticker-change positive">+0.0%</span></div>
+        <div class="ticker-item" data-coin="ethereum">Ξ Ethereum <strong class="ticker-price">R$ 9.814</strong> <span class="ticker-change positive">+0.1%</span></div>
+        <div class="ticker-item" data-coin="solana">◎ Solana <strong class="ticker-price">R$ 393</strong> <span class="ticker-change positive">+0.2%</span></div>
+        <div class="ticker-item" data-coin="binancecoin">◆ BNB <strong class="ticker-price">R$ 3.168</strong> <span class="ticker-change negative">-0.6%</span></div>
+        <div class="ticker-item" data-coin="ripple">X XRP <strong class="ticker-price">R$ 5.22</strong> <span class="ticker-change negative">-0.1%</span></div>
+        <div class="ticker-item" data-coin="tether">₮ USDT <strong class="ticker-price">R$ 5.22</strong> <span class="ticker-change positive">+0.0%</span></div>
         <!-- Duplicated for infinite scroll -->
-        <div class="ticker-item">₿ Bitcoin <strong class="ticker-price">R$ 512.400</strong> <span class="ticker-change positive">+2.3%</span></div>
-        <div class="ticker-item">Ξ Ethereum <strong class="ticker-price">R$ 18.250</strong> <span class="ticker-change positive">+1.8%</span></div>
-        <div class="ticker-item">◎ Solana <strong class="ticker-price">R$ 1.120</strong> <span class="ticker-change positive">+5.2%</span></div>
-        <div class="ticker-item">◆ BNB <strong class="ticker-price">R$ 2.980</strong> <span class="ticker-change negative">-0.7%</span></div>
-        <div class="ticker-item">X XRP <strong class="ticker-price">R$ 6.00</strong> <span class="ticker-change negative">-1.4%</span></div>
-        <div class="ticker-item">₮ USDT <strong class="ticker-price">R$ 5.76</strong> <span class="ticker-change positive">+0.05%</span></div>
+        <div class="ticker-item" data-coin="bitcoin">₿ Bitcoin <strong class="ticker-price">R$ 328.888</strong> <span class="ticker-change positive">+0.0%</span></div>
+        <div class="ticker-item" data-coin="ethereum">Ξ Ethereum <strong class="ticker-price">R$ 9.814</strong> <span class="ticker-change positive">+0.1%</span></div>
+        <div class="ticker-item" data-coin="solana">◎ Solana <strong class="ticker-price">R$ 393</strong> <span class="ticker-change positive">+0.2%</span></div>
+        <div class="ticker-item" data-coin="binancecoin">◆ BNB <strong class="ticker-price">R$ 3.168</strong> <span class="ticker-change negative">-0.6%</span></div>
+        <div class="ticker-item" data-coin="ripple">X XRP <strong class="ticker-price">R$ 5.22</strong> <span class="ticker-change negative">-0.1%</span></div>
+        <div class="ticker-item" data-coin="tether">₮ USDT <strong class="ticker-price">R$ 5.22</strong> <span class="ticker-change positive">+0.0%</span></div>
       </div>
     </div>
 
@@ -641,6 +641,57 @@
 
   <!-- JavaScript -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Ticker dinâmico: cotações em BRL via CoinGecko -->
+  <script>
+    (function () {
+      var COINS = {
+        bitcoin:     { sym: '₿', name: 'Bitcoin' },
+        ethereum:    { sym: 'Ξ', name: 'Ethereum' },
+        solana:      { sym: '◎', name: 'Solana' },
+        binancecoin: { sym: '◆', name: 'BNB' },
+        ripple:      { sym: 'X', name: 'XRP' },
+        tether:      { sym: '₮', name: 'USDT' }
+      };
+      var ids = Object.keys(COINS).join(',');
+
+      function fmtBRL(v) {
+        if (v >= 1000) return 'R$ ' + Math.round(v).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+        if (v >= 100) return 'R$ ' + Math.round(v);
+        return 'R$ ' + v.toFixed(2);
+      }
+      function fmtChange(v) {
+        var sign = v >= 0 ? '+' : '-';
+        var a = Math.abs(v);
+        return sign + (a < 1 ? a.toFixed(2) : a.toFixed(1)) + '%';
+      }
+
+      function render(data) {
+        for (var id in COINS) {
+          if (!data[id]) continue;
+          var items = document.querySelectorAll('.ticker-item[data-coin="' + id + '"]');
+          var p = data[id].brl, ch = data[id].brl_24h_change || 0;
+          var cls = ch >= 0 ? 'positive' : 'negative';
+          for (var i = 0; i < items.length; i++) {
+            var priceEl = items[i].querySelector('.ticker-price');
+            var changeEl = items[i].querySelector('.ticker-change');
+            if (priceEl) priceEl.textContent = fmtBRL(p);
+            if (changeEl) { changeEl.textContent = fmtChange(ch); changeEl.className = 'ticker-change ' + cls; }
+          }
+        }
+      }
+
+      function load() {
+        fetch('https://api.coingecko.com/api/v3/simple/price?ids=' + ids + '&vs_currencies=brl&include_24hr_change=true', { cache: 'no-store' })
+          .then(function (r) { return r.json(); })
+          .then(render)
+          .catch(function () { /* mantém os valores de fallback */ });
+      }
+
+      load();
+      setInterval(load, 60000); // atualiza a cada 60s
+    })();
+  </script>
 
   <!-- Contagem automática de artigos publicados -->
   <script>
