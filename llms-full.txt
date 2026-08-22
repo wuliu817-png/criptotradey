@@ -1,0 +1,53 @@
+# CriptoTradey — Índice Completo
+
+> Portal brasileiro de criptomoedas com guias práticos e análises de mercado 100% em português (pt-BR). Este arquivo lista todas as páginas públicas do site.
+
+## Páginas
+
+- [Início](https://criptotradey.com/): Página inicial
+- [Guias](https://criptotradey.com/guias/): Guias completos para iniciantes
+- [Análise](https://criptotradey.com/analise/): Análises de mercado
+- [Artigos](https://criptotradey.com/artigos/): Todos os artigos publicados
+- [Ferramentas](https://criptotradey.com/ferramentas/): Calculadoras e simuladores
+- [Calculadora DCA](https://criptotradey.com/ferramentas/calculadora-dca/): Simule investimentos recorrentes
+- [Comparador de taxas](https://criptotradey.com/ferramentas/comparador-taxas/): Compare taxas entre corretoras
+- [Simulador de imposto cripto](https://criptotradey.com/ferramentas/simulador-imposto-cripto/): Estime o imposto sobre criptoativos
+- [Glossário](https://criptotradey.com/glossario/): Glossário de termos
+- [Sobre nós](https://criptotradey.com/sobre.html)
+- [Autor](https://criptotradey.com/autor.html)
+- [Contato](https://criptotradey.com/contato.html)
+- [Política de privacidade](https://criptotradey.com/politica-de-privacidade.html)
+- [Termos de uso](https://criptotradey.com/termos.html)
+- [Disclaimer](https://criptotradey.com/disclaimer.html)
+
+## Artigos
+
+- [Bitcoin: O Guia Mais Completo para Iniciantes em 2026](https://criptotradey.com/artigos/bitcoin-guia-completo.html): O que é Bitcoin, como funciona a blockchain, como comprar BTC com segurança no Brasil e melhores carteiras.
+- [Ethereum (ETH): Guia Completo para Iniciantes 2026](https://criptotradey.com/artigos/ethereum-guia-completo.html): O que é Ethereum, como comprar ETH, diferenças do Bitcoin, staking, gas fees e ETFs.
+- [Solana (SOL): Vale a Pena Investir em 2026?](https://criptotradey.com/artigos/solana-guia-completo.html): Para quem a SOL faz sentido, Solana vs Ethereum, como comprar e riscos reais.
+- [BNB (Binance Coin): Vale a Pena Investir em 2026?](https://criptotradey.com/artigos/bnb-guia-completo.html): Descontos nas taxas, BNB vs Ethereum, como comprar e riscos de centralização.
+- [XRP (Ripple): Vale a Pena Investir em 2026?](https://criptotradey.com/artigos/xrp-guia-completo.html): Fim do caso SEC, ETF à vista, stablecoin RLUSD e riscos.
+- [Dogecoin (DOGE): Vale a Pena Investir em 2026?](https://criptotradey.com/artigos/dogecoin-guia-completo.html): Oferta ilimitada, preço movido a meme e ETFs de DOGE.
+- [O Que é USDT? Guia Completo de Stablecoins 2026](https://criptotradey.com/artigos/o-que-e-usdt-guia-stablecoins.html): O que é USDT, diferenças do USDC e riscos de stablecoins.
+- [O Que São Altcoins? Guia Completo para Iniciantes](https://criptotradey.com/artigos/o-que-sao-altcoins.html): Como Ethereum, Solana e BNB se diferenciam do Bitcoin.
+- [Top 10 Altcoins com Maior Potencial em 2026](https://criptotradey.com/artigos/top-10-altcoins-2026.html): Análise de Ethereum, Solana, BNB, Avalanche, Chainlink e mais.
+- [Como Comprar Criptomoedas no Brasil: Passo a Passo Seguro](https://criptotradey.com/artigos/como-comprar-criptomoedas-brasil.html): Como comprar Bitcoin e altcoins via PIX nas corretoras nacionais.
+- [Como Declarar Criptomoedas no IR 2026](https://criptotradey.com/artigos/como-declarar-criptomoedas-ir.html): Passo a passo da declaração, ganho de capital, GCAP, DARF e multas.
+- [Melhores Corretoras de Criptomoedas no Brasil em 2026](https://criptotradey.com/artigos/melhores-corretoras-cripto-2026.html): Comparativo de Binance, Mercado Bitcoin, NovaDAX, Bitso e Ripio.
+- [Binance para Iniciantes 2026: Guia do Zero ao Trade](https://criptotradey.com/artigos/binance-para-iniciantes.html): Criar conta, depositar via PIX, comprar Bitcoin, taxas e segurança.
+- [Segurança na Binance 2026: 10 Dicas Para Proteger Sua Conta](https://criptotradey.com/artigos/seguranca-binance-10-dicas.html): 2FA, código anti-phishing, whitelist de saque e YubiKey.
+- [Binance Earn 2026: Staking e Renda Passiva](https://criptotradey.com/artigos/binance-earn-staking.html): Simple Earn, ETH Staking, Launchpool e Dual Investment.
+- [Binance P2P: Comprar USDT Sem Taxa](https://criptotradey.com/artigos/binance-p2p-comprar-usdt-sem-taxa.html): Comprar USDT via PIX, escolher vendedor e evitar golpes.
+- [OKX Como Funciona? Guia Para Brasileiros 2026](https://criptotradey.com/artigos/okx-como-funciona-guia-brasileiros.html): Criar conta, depositar via PIX, taxas e produtos DeFi/Web3.
+- [Carteiras de Criptomoedas: Qual a Melhor? Hot vs Cold Wallet](https://criptotradey.com/artigos/carteiras-criptomoedas-guia.html): MetaMask, Trust Wallet, Ledger, Trezor e como proteger suas criptos.
+- [DCA Bitcoin: Como Investir Todo Mês](https://criptotradey.com/artigos/dca-bitcoin-como-investir-todo-mes.html): Dollar Cost Averaging, quanto investir e resultados históricos.
+- [Análise Técnica do Bitcoin: Como Analisar Gráficos](https://criptotradey.com/artigos/analise-tecnica-bitcoin.html): Suportes, resistências, RSI, médias móveis, candles e volume.
+- [Métricas On-Chain Bitcoin: Como Analisar Dados da Blockchain](https://criptotradey.com/artigos/metricas-on-chain-bitcoin.html): Fluxo de exchanges, endereços ativos, acumulação de baleias e hash rate.
+- [Como Analisar Criptomoedas Antes de Investir](https://criptotradey.com/artigos/como-analisar-criptomoedas.html): Tokenomics, equipe, tecnologia, comunidade e casos de uso.
+- [DeFi em 2026: Como Ganhar Rendimentos com Criptomoedas](https://criptotradey.com/artigos/defi-guia-2026.html): Staking, yield farming, liquidity pools e empréstimos descentralizados.
+- [Panorama do Mercado Cripto 2026: Tendências e Narrativas](https://criptotradey.com/artigos/panorama-mercado-cripto-2026.html): DePIN, RWAs, IA descentralizada e Bitcoin como reserva global.
+
+## Notas
+
+- Sitemap: https://criptotradey.com/sitemap.xml
+- RSS: https://criptotradey.com/rss.xml
