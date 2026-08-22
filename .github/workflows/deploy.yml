@@ -20,3 +20,15 @@ jobs:
           publish_dir: .
           cname: criptotradey.com
           keep_files: false
+
+      # 发版后把 sitemap 里的页面地址推给 Bing（IndexNow）
+      - name: Submit URLs to IndexNow
+        run: |
+          KEY="9bbcc70476f442948006a29867011ece"
+          # 从 sitemap.xml 提取全部 <loc> 地址，转成 JSON 数组
+          grep -o '<loc>[^<]*</loc>' sitemap.xml | sed 's/<[^>]*>//g' | jq -R . | jq -s . > /tmp/urls.json
+          curl -sS -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{\"host\":\"criptotradey.com\",\"key\":\"$KEY\",\"urlList\":$(cat /tmp/urls.json)}" \
+            | tee /tmp/indexnow-response.txt
+          echo "IndexNow 提交完成：$(jq length /tmp/urls.json) 个 URL"
