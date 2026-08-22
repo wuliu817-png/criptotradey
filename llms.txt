@@ -1,0 +1,42 @@
+# CriptoTradey
+
+> Portal brasileiro de criptomoedas com guias práticos e análises de mercado 100% em português (pt-BR). Conteúdo educativo sobre Bitcoin, altcoins, DeFi e Web3 para investidores brasileiros iniciantes e intermediários. Atualizado regularmente.
+
+## Páginas principais
+
+- [Início](https://criptotradey.com/): Página inicial com guias e análises em destaque
+- [Guias](https://criptotradey.com/guias/): Guias completos para iniciantes
+- [Análise](https://criptotradey.com/analise/): Análises de mercado
+- [Artigos](https://criptotradey.com/artigos/): Todos os artigos publicados
+- [Ferramentas](https://criptotradey.com/ferramentas/): Calculadoras e simuladores
+- [Glossário](https://criptotradey.com/glossario/): Glossário de termos de criptomoedas
+
+## Ferramentas
+
+- [Calculadora DCA](https://criptotradey.com/ferramentas/calculadora-dca/): Simule investimentos recorrentes em cripto
+- [Comparador de taxas](https://criptotradey.com/ferramentas/comparador-taxas/): Compare taxas entre corretoras
+- [Simulador de imposto cripto](https://criptotradey.com/ferramentas/simulador-imposto-cripto/): Estime o imposto sobre seus criptoativos
+
+## Institucional
+
+- [Sobre nós](https://criptotradey.com/sobre.html)
+- [Autor](https://criptotradey.com/autor.html)
+- [Contato](https://criptotradey.com/contato.html)
+- [Política de privacidade](https://criptotradey.com/politica-de-privacidade.html)
+- [Termos de uso](https://criptotradey.com/termos.html)
+- [Disclaimer](https://criptotradey.com/disclaimer.html)
+
+## Artigos em destaque
+
+- [Bitcoin: O Guia Mais Completo para Iniciantes](https://criptotradey.com/artigos/bitcoin-guia-completo.html)
+- [Como Comprar Criptomoedas no Brasil](https://criptotradey.com/artigos/como-comprar-criptomoedas-brasil.html)
+- [Como Declarar Criptomoedas no IR 2026](https://criptotradey.com/artigos/como-declarar-criptomoedas-ir.html)
+- [Melhores Corretoras de Criptomoedas no Brasil](https://criptotradey.com/artigos/melhores-corretoras-cripto-2026.html)
+- [Binance para Iniciantes](https://criptotradey.com/artigos/binance-para-iniciantes.html)
+- [Análise Técnica do Bitcoin](https://criptotradey.com/artigos/analise-tecnica-bitcoin.html)
+
+## Notas
+
+- Lista completa de todos os artigos: [llms-full.txt](https://criptotradey.com/llms-full.txt)
+- Sitemap: https://criptotradey.com/sitemap.xml
+- RSS: https://criptotradey.com/rss.xml
