@@ -13,6 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # 需要历史做 git diff，找出本次变更的文件
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
@@ -21,14 +24,42 @@ jobs:
           cname: criptotradey.com
           keep_files: false
 
-      # 发版后把 sitemap 里的页面地址推给 Bing（IndexNow）
-      - name: Submit URLs to IndexNow
+      # 只把「本次变更的页面」推给 Bing（IndexNow），而不是全站
+      - name: Submit changed URLs to IndexNow
         run: |
           KEY="9bbcc70476f442948006a29867011ece"
-          # 从 sitemap.xml 提取全部 <loc> 地址，转成 JSON 数组
-          grep -o '<loc>[^<]*</loc>' sitemap.xml | sed 's/<[^>]*>//g' | jq -R . | jq -s . > /tmp/urls.json
+
+          # 确定本次变更范围：push 事件用 event.before，否则对比上一次提交
+          BEFORE="${{ github.event.before }}"
+          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            BEFORE="HEAD~1"
+          fi
+
+          # 找出本次新增/修改/重命名的 HTML 文件
+          changed=$(git diff --name-only --diff-filter=ACMR "$BEFORE" HEAD -- '*.html' 2>/dev/null || true)
+
+          # 文件路径 → 站点 URL（index.html 对应目录根）
+          : > /tmp/changed-urls.txt
+          while IFS= read -r f; do
+            [ -z "$f" ] && continue
+            case "$f" in
+              index.html)   echo "https://criptotradey.com/" >> /tmp/changed-urls.txt ;;
+              */index.html) echo "https://criptotradey.com/${f%/index.html}/" >> /tmp/changed-urls.txt ;;
+              *.html)       echo "https://criptotradey.com/$f" >> /tmp/changed-urls.txt ;;
+            esac
+          done <<< "$changed"
+
+          # 有变更就只推这些；否则（首次 push / 检测不到）回退到全站 sitemap
+          if [ -s /tmp/changed-urls.txt ]; then
+            urlJson=$(jq -R . /tmp/changed-urls.txt | jq -s .)
+            echo "IndexNow 增量提交 $(echo "$urlJson" | jq length) 个变更 URL"
+          else
+            urlJson=$(grep -o '<loc>[^<]*</loc>' sitemap.xml | sed 's/<[^>]*>//g' | jq -R . | jq -s .)
+            echo "IndexNow 全量提交 $(echo "$urlJson" | jq length) 个 URL（回退）"
+          fi
+
           curl -sS -X POST "https://api.indexnow.org/indexnow" \
             -H "Content-Type: application/json; charset=utf-8" \
-            -d "{\"host\":\"criptotradey.com\",\"key\":\"$KEY\",\"urlList\":$(cat /tmp/urls.json)}" \
-            | tee /tmp/indexnow-response.txt
-          echo "IndexNow 提交完成：$(jq length /tmp/urls.json) 个 URL"
+            -d "{\"host\":\"criptotradey.com\",\"key\":\"$KEY\",\"urlList\":$urlJson}"
+          echo ""
+          echo "$urlJson" | jq -r '.[]'
