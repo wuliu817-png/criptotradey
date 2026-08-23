@@ -55,6 +55,60 @@
     tr:nth-child(even) { background: var(--color-surface); }
     .section-divider { border-top: 2px solid var(--color-border); margin: var(--space-8) 0; }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calculadora de DCA Bitcoin",
+    "url": "https://criptotradey.com/ferramentas/calculadora-dca/",
+    "description": "Simule sua estratégia DCA (Dollar Cost Averaging) de Bitcoin. Veja quanto BTC você acumularia investindo um valor fixo todo mês, com projeções realistas.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "inLanguage": "pt-BR",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"},
+    "publisher": {"@type": "Organization", "name": "CriptoTradey", "url": "https://criptotradey.com/"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Como funciona esta calculadora de DCA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ela simula investir um valor fixo em Bitcoin todo mês durante um período. A cada mês, a calculadora compra BTC com o valor informado, acumula a quantidade e mostra o preço médio e o valor final estimado com base na variação mensal que você definiu."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O que é o \"preço médio\" mostrado no resultado?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "É a divisão do total investido pelo total de BTC acumulado. No DCA, o preço médio costuma ficar abaixo do preço médio de mercado, porque você compra mais BTC quando ele está barato e menos quando está caro."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O que é a \"variação mensal estimada\"?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "É a variação percentual que você espera que o Bitcoin tenha a cada mês, usada para projetar o futuro. O histórico varia muito: em ciclos de alta, cerca de 2-3% ao mês; em bear markets, pode ser negativa. É apenas uma premissa, não uma previsão."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O resultado garante retorno ou é uma recomendação de investimento?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. É uma simulação educacional. Resultados passados não garantem retornos futuros, e criptomoedas são investimentos de alto risco. Para entender a estratégia em detalhes, veja nosso guia de DCA passo a passo."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -142,6 +196,14 @@
         <h3>📖 O que é DCA (Dollar Cost Averaging)?</h3>
         <p>DCA é uma estratégia onde você investe o <strong>mesmo valor em Reais todo mês</strong>, independentemente do preço do Bitcoin. Quando o BTC está barato, você compra mais. Quando está caro, você compra menos. No longo prazo, isso reduz o impacto da volatilidade e evita o erro de tentar "acertar o timing" do mercado.</p>
         <p style="margin-top:var(--space-3);">👉 Para começar com Bitcoin, use a <a href="https://www.binance.com/pt-BR/join?ref=BN522" target="_blank" rel="nofollow sponsored noopener">Binance (código BN522)</a> e configure compras recorrentes automáticas.</p>
+      </div>
+
+      <h2 id="faq-dca">FAQ — Perguntas Frequentes</h2>
+      <div class="faq-section">
+        <div class="faq-item"><h3>Como funciona esta calculadora de DCA?</h3><p>Ela simula investir um valor fixo em Bitcoin todo mês durante um período. A cada mês, a calculadora compra BTC com o valor informado, acumula a quantidade e mostra o preço médio e o valor final estimado com base na variação mensal que você definiu.</p></div>
+        <div class="faq-item"><h3>O que é o "preço médio" mostrado no resultado?</h3><p>É a divisão do total investido pelo total de BTC acumulado. No DCA, o preço médio costuma ficar abaixo do preço médio de mercado, porque você compra mais BTC quando ele está barato e menos quando está caro.</p></div>
+        <div class="faq-item"><h3>O que é a "variação mensal estimada"?</h3><p>É a variação percentual que você espera que o Bitcoin tenha a cada mês, usada para projetar o futuro. O histórico varia muito: em ciclos de alta, cerca de 2-3% ao mês; em bear markets, pode ser negativa. É apenas uma premissa, não uma previsão.</p></div>
+        <div class="faq-item"><h3>O resultado garante retorno ou é uma recomendação de investimento?</h3><p>Não. É uma simulação educacional. Resultados passados não garantem retornos futuros, e criptomoedas são investimentos de alto risco. Para entender a estratégia em detalhes, veja nosso <a href="/artigos/dca-bitcoin-como-investir-todo-mes.html">guia de DCA passo a passo</a>.</p></div>
       </div>
     </div>
   </main>
