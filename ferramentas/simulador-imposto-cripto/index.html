@@ -47,6 +47,60 @@
     .alert-danger { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
     .rules-box { padding: var(--space-6); background: var(--color-surface); border-radius: var(--radius-lg); margin-top: var(--space-8); }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Simulador de Ganho de Capital Cripto",
+    "url": "https://criptotradey.com/ferramentas/simulador-imposto-cripto/",
+    "description": "Simulador de imposto sobre criptomoedas: calcule o ganho de capital (GCAP) segundo as regras da Receita Federal 2026. Isenção de R$35 mil, DARF e mais.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "inLanguage": "pt-BR",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"},
+    "publisher": {"@type": "Organization", "name": "CriptoTradey", "url": "https://criptotradey.com/"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Como funciona o cálculo deste simulador?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O simulador subtrai o valor de compra do valor de venda para obter o lucro (ganho de capital). Se o volume total de vendas do mês ficar até R$ 35.000, o lucro é isento. Acima disso, aplica-se 15% sobre o lucro, pago via DARF."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O que significa \"volume total de vendas no mês\"?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "É a soma de todas as vendas de criptoativos que você fez no mês, não apenas a operação que está simulando. A isenção de R$ 35.000 é calculada sobre esse total. Se for sua única venda no mês, use o mesmo valor do campo \"Valor Total da Venda\"."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "A isenção de R$ 35 mil é sobre o lucro ou sobre o valor vendido?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sobre o valor total vendido no mês, não sobre o lucro. Por exemplo, se você vendeu R$ 40.000 no mês, o lucro é tributado mesmo que tenha sido de apenas R$ 1.000."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O resultado substitui o GCAP ou a declaração do IR?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. Este simulador é uma estimativa educacional. A apuração oficial deve ser feita no programa GCAP da Receita Federal e na declaração anual do IR. Consulte um contador para a sua situação específica e veja nosso guia de como declarar criptomoedas no IR."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -140,6 +194,14 @@
           </tbody>
         </table>
         <p style="margin-top:var(--space-4);">👉 Guia completo: <a href="/artigos/como-declarar-criptomoedas-ir.html">Como Declarar Criptomoedas no IR 2026</a></p>
+      </div>
+
+      <h2 id="faq-simulador">FAQ — Perguntas Frequentes</h2>
+      <div class="faq-section">
+        <div class="faq-item"><h3>Como funciona o cálculo deste simulador?</h3><p>O simulador subtrai o valor de compra do valor de venda para obter o lucro (ganho de capital). Se o volume total de vendas do mês ficar até R$ 35.000, o lucro é isento. Acima disso, aplica-se 15% sobre o lucro, pago via DARF.</p></div>
+        <div class="faq-item"><h3>O que significa "volume total de vendas no mês"?</h3><p>É a soma de todas as vendas de criptoativos que você fez no mês, não apenas a operação que está simulando. A isenção de R$ 35.000 é calculada sobre esse total. Se for sua única venda no mês, use o mesmo valor do campo "Valor Total da Venda".</p></div>
+        <div class="faq-item"><h3>A isenção de R$ 35 mil é sobre o lucro ou sobre o valor vendido?</h3><p>Sobre o valor total vendido no mês, não sobre o lucro. Por exemplo, se você vendeu R$ 40.000 no mês, o lucro é tributado mesmo que tenha sido de apenas R$ 1.000.</p></div>
+        <div class="faq-item"><h3>O resultado substitui o GCAP ou a declaração do IR?</h3><p>Não. Este simulador é uma estimativa educacional. A apuração oficial deve ser feita no programa GCAP da Receita Federal e na declaração anual do IR. Consulte um contador para a sua situação específica e veja nosso <a href="/artigos/como-declarar-criptomoedas-ir.html">guia de como declarar criptomoedas no IR</a>.</p></div>
       </div>
     </div>
   </main>
