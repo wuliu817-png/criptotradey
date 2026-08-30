@@ -26,9 +26,9 @@
       <div class="contact-grid">
         <div class="contact-info">
           <h2 style="margin-bottom: var(--space-6);">Informações de Contato</h2>
-          <div class="info-item"><div class="info-icon">📧</div><div><strong>E-mail</strong><p>contato@criptotradey.com</p></div></div>
-          <div class="info-item"><div class="info-icon">🐦</div><div><strong>Twitter / X</strong><p>@criptotradey</p></div></div>
-          <div class="info-item"><div class="info-icon">📱</div><div><strong>Telegram</strong><p>t.me/criptotradey</p></div></div>
+          <div class="info-item"><div class="info-icon">📧</div><div><strong>E-mail</strong><p><a href="mailto:contato@criptotradey.com">contato@criptotradey.com</a></p></div></div>
+          <div class="info-item"><div class="info-icon">🐦</div><div><strong>Twitter / X</strong><p><a href="https://x.com/CoinTrailHub" target="_blank" rel="noopener">@CoinTrailHub</a></p></div></div>
+          <div class="info-item"><div class="info-icon">📱</div><div><strong>Telegram</strong><p><a href="https://t.me/+0ZKfUqf0xKpkMjFl" target="_blank" rel="noopener">CoinTrailHub</a></p></div></div>
           <div class="info-item"><div class="info-icon">⏰</div><div><strong>Tempo de Resposta</strong><p>Geralmente respondemos em até 48 horas úteis.</p></div></div>
 
           <h3 style="margin-top: var(--space-8);">Tipos de Contato</h3>
@@ -40,14 +40,12 @@
           </ul>
         </div>
 
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso! Entraremos em contato em até 48 horas.'); this.reset();">
-          <h3 style="margin-bottom: var(--space-5);">Envie sua Mensagem</h3>
-          <div class="form-group"><label for="nome">Nome</label><input type="text" id="nome" required placeholder="Seu nome completo"></div>
-          <div class="form-group"><label for="email">E-mail</label><input type="email" id="email" required placeholder="seu@email.com"></div>
-          <div class="form-group"><label for="assunto">Assunto</label><select id="assunto"><option>Dúvida sobre criptomoedas</option><option>Sugestão de conteúdo</option><option>Parceria comercial</option><option>Errata / Correção</option><option>Outro</option></select></div>
-          <div class="form-group"><label for="mensagem">Mensagem</label><textarea id="mensagem" required placeholder="Escreva sua mensagem aqui..."></textarea></div>
-          <button type="submit" class="btn-primary" style="width:100%;">Enviar Mensagem</button>
-        </form>
+        <div class="contact-form">
+          <h3 style="margin-bottom: var(--space-5);">Envie sua Mensagem por E-mail</h3>
+          <p style="color:var(--color-text-secondary);margin-bottom:var(--space-5);">Clique no botão abaixo para abrir seu cliente de e-mail. Sua mensagem será enviada diretamente para <strong>contato@criptotradey.com</strong> e respondida em até 48 horas úteis.</p>
+          <a href="mailto:contato@criptotradey.com?subject=Contato%20CriptoTradey" class="btn-primary" style="width:100%;text-align:center;display:block;text-decoration:none;">📧 Enviar E-mail</a>
+          <p style="margin-top:var(--space-4);font-size:var(--text-sm);color:var(--color-text-secondary);">Dica: no corpo do e-mail, conte qual é sua dúvida e, se for uma correção, inclua o link do artigo.</p>
+        </div>
       </div>
     </div>
   </main>
