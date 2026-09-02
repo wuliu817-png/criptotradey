@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Ana Costa">
+  <defs>
+    <radialGradient id="bg" cx="38%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#FFC266"/>
+      <stop offset="55%" stop-color="#F7931A"/>
+      <stop offset="100%" stop-color="#D96A00"/>
+    </radialGradient>
+  </defs>
+  <circle cx="100" cy="100" r="99" fill="url(#bg)"/>
+  <circle cx="100" cy="100" r="96.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="2.5"/>
+  <text x="100" y="126" text-anchor="middle" font-family="Inter, -apple-system, 'Segoe UI', system-ui, sans-serif" font-size="76" font-weight="800" letter-spacing="1" fill="#FFFFFF">AC</text>
+</svg>
