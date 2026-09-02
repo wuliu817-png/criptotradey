@@ -82,43 +82,6 @@
   }
 
   // ============================================================
-  // Newsletter Form Handler
-  // ============================================================
-  const newsletterForms = document.querySelectorAll('.newsletter-form');
-
-  newsletterForms.forEach(function(form) {
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const emailInput = form.querySelector('input[type="email"]');
-      const button = form.querySelector('button');
-      const originalText = button.textContent;
-
-      if (!emailInput || !emailInput.value) {
-        emailInput.focus();
-        return;
-      }
-
-      // Simulate submission
-      button.disabled = true;
-      button.textContent = 'Enviando...';
-
-      setTimeout(function() {
-        button.textContent = '✓ Inscrito!';
-        button.style.background = '#00D4AA';
-        emailInput.value = '';
-        emailInput.placeholder = 'Obrigado por se inscrever! 🎉';
-
-        setTimeout(function() {
-          button.disabled = false;
-          button.textContent = originalText;
-          button.style.background = '';
-          emailInput.placeholder = 'Seu melhor e-mail';
-        }, 3000);
-      }, 1000);
-    });
-  });
-
-  // ============================================================
   // Lazy Loading Images
   // ============================================================
   if ('IntersectionObserver' in window) {
