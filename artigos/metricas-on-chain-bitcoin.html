@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Métricas On-Chain do Bitcoin: Como Ler a Blockchain | CriptoTradey</title>
-  <meta name="description" content="Métricas on-chain mostram o que os investidores fazem, não o que dizem — mas cada métrica isolada mente. Aprenda a ler as 5 principais juntas.">
-  <meta name="keywords" content="métricas on-chain, análise on-chain bitcoin, fluxo exchange, baleias bitcoin, hash rate, endereços ativos, dados blockchain, glassnode, cryptoquant">
+  <title>Análise On-Chain do Bitcoin: 5 Métricas e Como Evitar Falsos Sinais | CriptoTradey</title>
+  <meta name="description" content="A blockchain registra o que aconteceu, não por que aconteceu. Aprenda a ler 5 métricas on-chain e a evitar o erro de confundir comportamento com intenção.">
+  <meta name="keywords" content="métricas on-chain, análise on-chain bitcoin, fluxo exchange, endereços ativos, supply in profit, hash rate, utxo, entity adjustment, glassnode, cryptoquant">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <link rel="canonical" href="https://criptotradey.com/artigos/metricas-on-chain-bitcoin.html">
 
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Métricas On-Chain do Bitcoin: Como Ler a Blockchain">
-  <meta property="og:description" content="Métricas on-chain mostram o que os investidores fazem, não o que dizem — mas cada métrica isolada mente. Aprenda a ler as 5 principais juntas.">
+  <meta property="og:title" content="Análise On-Chain do Bitcoin: 5 Métricas e Como Evitar Falsos Sinais">
+  <meta property="og:description" content="A blockchain registra o que aconteceu, não por que aconteceu. Como ler 5 métricas on-chain sem confundir comportamento com intenção.">
   <meta property="og:url" content="https://criptotradey.com/artigos/metricas-on-chain-bitcoin.html">
   <meta property="og:site_name" content="CriptoTradey">
   <meta property="og:locale" content="pt_BR">
@@ -21,22 +21,22 @@
   <meta property="og:image" content="https://criptotradey.com/assets/images/onchain-card.webp">
   <meta name="twitter:image" content="https://criptotradey.com/assets/images/onchain-card.webp">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Métricas On-Chain do Bitcoin: Guia Prático">
-  <meta name="twitter:description" content="A métrica isolada mente; o conjunto conta uma história. Como ler a blockchain do Bitcoin.">
+  <meta name="twitter:title" content="Análise On-Chain do Bitcoin: 5 Métricas e Como Evitar Falsos Sinais">
+  <meta name="twitter:description" content="Não confunda o que a blockchain mostra (comportamento) com o que você imagina (intenção).">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Métricas On-Chain do Bitcoin: Como Ler Dados da Blockchain para Investir Melhor",
-    "description": "Métricas on-chain mostram o que os investidores fazem, não o que dizem — mas cada métrica isolada mente. Aprenda a ler as 5 principais juntas.",
+    "headline": "Análise On-Chain do Bitcoin: 5 Métricas e Como Evitar Falsos Sinais",
+    "description": "A blockchain registra o que aconteceu, não por que aconteceu. Aprenda a ler 5 métricas on-chain e a evitar o erro de confundir comportamento com intenção.",
     "author": { "@type": "Person", "name": "Ana Costa", "jobTitle": "Analista de Criptomoedas", "url": "https://criptotradey.com/autor.html" },
     "datePublished": "2026-08-02T08:00:00-03:00",
-    "dateModified": "2026-08-30T12:00:00-03:00",
+    "dateModified": "2026-09-08T08:00:00-03:00",
     "publisher": { "@type": "Organization", "name": "CriptoTradey" },
-        "image": "https://criptotradey.com/assets/images/onchain-card.webp",
+    "image": "https://criptotradey.com/assets/images/onchain-card.webp",
     "articleSection": "On-Chain",
-"inLanguage": "pt-BR",
+    "inLanguage": "pt-BR",
     "mainEntityOfPage": { "@type": "WebPage", "@id": "https://criptotradey.com/artigos/metricas-on-chain-bitcoin.html" }
   }
   </script>
@@ -46,12 +46,12 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "O que são métricas on-chain?", "acceptedAnswer": { "@type": "Answer", "text": "São dados extraídos diretamente da blockchain — o registro público e imutável de todas as transações. Incluem número de transações, endereços ativos, fluxo de exchanges, saldo de carteiras e hash rate. Diferente da análise técnica, que olha para o preço (o efeito), a análise on-chain olha para a atividade real da rede (a causa)." } },
-      { "@type": "Question", "name": "Qual a métrica on-chain mais importante?", "acceptedAnswer": { "@type": "Answer", "text": "Para iniciantes, o fluxo líquido de exchanges: quanto BTC está saindo ou entrando nas corretoras. BTC saindo = investidores retirando para guardar em carteira própria (holding, sinal altista); BTC entrando = investidores depositando para vender (sinal baixista). É a métrica mais direta e mais correlacionada com movimentos de preço." } },
-      { "@type": "Question", "name": "Fluxo de exchange negativo é bom para o Bitcoin?", "acceptedAnswer": { "@type": "Answer", "text": "Sim, em geral. Fluxo negativo significa mais BTC saindo das corretoras do que entrando — investidores estão retirando para guardar em carteira própria. Isso reduz a oferta disponível para venda imediata e historicamente tem precedido altas. Mas é um sinal de contexto, não uma garantia: uma métrica sozinha não compra nem vende por você." } },
-      { "@type": "Question", "name": "O hash rate do Bitcoin caiu em 2026? Por quê?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Depois de atingir pico acima de 1.000 EH/s no fim de 2025, o hash rate recuou para a faixa de ~850–930 EH/s em meados de 2026 — uma queda de cerca de 17% a 19%. O motivo principal é econômico: muitos mineradores estão migrando capacidade para data centers de inteligência artificial, onde o retorno por megawatt é maior. Ou seja, a queda não é sinal de rede em colapso, e sim de capital indo atrás de retorno melhor." } },
-      { "@type": "Question", "name": "Como saber se baleias estão comprando Bitcoin?", "acceptedAnswer": { "@type": "Answer", "text": "Acompanhe dois sinais juntos: o número de endereços com mais de 1.000 BTC (disponível no Glassnode) e o fluxo líquido de exchanges. Se os endereços grandes estão aumentando enquanto o saldo de BTC nas corretoras cai, é sinal de acumulação. Plataformas como Glassnode e CryptoQuant mostram esses dados, muitos deles na versão gratuita." } },
-      { "@type": "Question", "name": "Preciso pagar para ver métricas on-chain?", "acceptedAnswer": { "@type": "Answer", "text": "Não. Glassnode, CryptoQuant e CoinMetrics têm planos gratuitos com as métricas essenciais (algumas com atraso de 24h). Para consultar transações e endereços individuais, o explorador da Blockchain.com é gratuito e sem cadastro. A versão paga adiciona mais dados e tempo real, mas a gratuita é suficiente para a maioria dos investidores." } }
+      { "@type": "Question", "name": "O que são métricas on-chain?", "acceptedAnswer": { "@type": "Answer", "text": "São dados extraídos diretamente da blockchain — o registro público de todas as transações. Incluem fluxo de exchanges, endereços ativos, saldo de carteiras, supply in profit e hash rate. O ponto essencial é o que elas mostram: a blockchain registra que BTC se moveu, mas não revela automaticamente por que se moveu nem o que o dono fará depois." } },
+      { "@type": "Question", "name": "Qual a métrica on-chain mais importante?", "acceptedAnswer": { "@type": "Answer", "text": "Não existe uma única métrica que prevê preço sozinha. O fluxo de exchanges é das mais acompanhadas, mas é uma estimativa (as exchanges são identificadas por heurísticas, não marcadas na blockchain). O valor está em cruzar várias métricas e, antes de qualquer conclusão, lembrar que endereço não é pessoa e comportamento não é intenção." } },
+      { "@type": "Question", "name": "Fluxo de exchange negativo é bom para o Bitcoin?", "acceptedAnswer": { "@type": "Answer", "text": "Não dá para afirmar isso como regra. Saída de BTC das exchanges reduz o saldo identificado nas corretoras, o que costuma ser lido como menos oferta disponível para venda. Mas isso não prova acumulação de longo prazo: pode ser custódia, transferência interna, reorganização de carteiras ou liquidação OTC. É um dado de contexto, não um sinal isolado." } },
+      { "@type": "Question", "name": "O hash rate do Bitcoin caiu em 2026? Por quê?", "acceptedAnswer": { "@type": "Answer", "text": "Depois de um pico acima de 1.000 EH/s no fim de 2025, o hash rate recuou para cerca de 850–930 EH/s em meados de 2026. Parte da explicação é econômica: alguns mineradores redirecionaram capital, energia e instalações para data centers de HPC/IA. Mas ASICs de Bitcoin não são usados diretamente para treinar IA, e o hash rate também responde ao preço do BTC, à dificuldade, ao custo de energia e à eficiência das máquinas." } },
+      { "@type": "Question", "name": "Como saber se baleias estão comprando Bitcoin?", "acceptedAnswer": { "@type": "Answer", "text": "Com cautela: um endereço com +1.000 BTC não é uma pessoa. Pode ser uma exchange (representando milhões de clientes), um custodiante de ETF ou uma entidade que controla vários endereços. O aumento de endereços grandes indica concentração possível, não necessariamente 'grandes compradores entrando'. Para interpretar, é preciso agrupar endereços em entidades — um processo útil, mas imperfeito." } },
+      { "@type": "Question", "name": "Preciso pagar para ver métricas on-chain?", "acceptedAnswer": { "@type": "Answer", "text": "Não. Glassnode, CryptoQuant e CoinMetrics têm planos gratuitos com as métricas essenciais (algumas com atraso de 24h). Para consultar transações e endereços individuais, o explorador da Blockchain.com é gratuito. A versão paga adiciona mais dados e tempo real, mas a gratuita cobre a maioria dos casos." } }
     ]
   }
   </script>
@@ -63,7 +63,7 @@
     "itemListElement": [
       {"@type": "ListItem", "position": 1, "name": "Início", "item": "https://criptotradey.com/"},
       {"@type": "ListItem", "position": 2, "name": "Artigos", "item": "https://criptotradey.com/artigos/"},
-      {"@type": "ListItem", "position": 3, "name": "Métricas On-Chain do Bitcoin"}
+      {"@type": "ListItem", "position": 3, "name": "Análise On-Chain do Bitcoin"}
     ]
   }
   </script>
@@ -89,12 +89,11 @@
         <a href="/guias/">Guias</a>
         <a href="/analise/">Análise</a>
         <a href="/artigos/">Artigos</a>
-        <a href="/ferramentas/">Ferramentas</a></li>
-        <li><a href="/sobre.html">Sobre</a>
+        <a href="/ferramentas/">Ferramentas</a>
+        <a href="/sobre.html">Sobre</a>
       </nav>
       <div class="header-actions">
         <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro"><span class="theme-icon">🌙</span></button>
-        
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu" aria-expanded="false">☰</button>
       </div>
     </div>
@@ -104,7 +103,7 @@
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Início</a> <span class="separator">›</span>
       <a href="/artigos/">Artigos</a> <span class="separator">›</span>
-      <span>Métricas On-Chain</span>
+      <span>Análise On-Chain</span>
     </nav>
   </div>
 
@@ -113,10 +112,10 @@
       <article>
         <header class="article-header">
           <span class="article-category">On-Chain</span>
-          <h1>Métricas On-Chain do Bitcoin: Como Ler Dados da Blockchain para Investir Melhor</h1>
+          <h1>Análise On-Chain do Bitcoin: 5 Métricas e Como Evitar Falsos Sinais</h1>
 
           <div class="article-summary">
-            <strong>Toda transação de Bitcoin fica registrada para sempre, e isso é uma vantagem que nenhum outro mercado oferece.</strong> Enquanto o preço mostra o que a multidão está gritando, a blockchain mostra o que ela está de fato fazendo. Mas existe uma armadilha que faz mais gente perder dinheiro do que a falta de informação: <strong>métrica on-chain isolada mente; o conjunto é que conta uma história.</strong> Neste guia você aprende as 5 métricas que importam — e, mais importante, como lê-las juntas em vez de uma por vez.
+            <strong>A blockchain do Bitcoin registra cada transação — mas registra o que aconteceu, não por que aconteceu.</strong> O erro mais caro da análise on-chain é confundir <em>comportamento</em> com <em>intenção</em>: uma entrada em exchange não é um voto de venda, e um endereço grande não é uma "baleia" com um plano. Neste guia você aprende 5 métricas que descrevem a atividade real da rede e, mais importante, <strong>como evitar os falsos sinais</strong> que nascem de ler dado como se fosse intenção.
           </div>
 
           <div class="article-byline">
@@ -128,134 +127,172 @@
               </div>
             </div>
             <div class="meta-item">📅 02 Ago 2026</div>
-            <div class="meta-item">🔄 Atualizado: 30 Ago 2026</div>
-            <div class="meta-item">⏱️ 9 min de leitura</div>
+            <div class="meta-item">🔄 Atualizado: 08 Set 2026</div>
+            <div class="meta-item">⏱️ 10 min de leitura</div>
           </div>
         </header>
 
         <figure class="article-hero">
-          <img src="/assets/images/onchain-card.webp" alt="Métricas on-chain do Bitcoin: fluxo de exchanges, acumulação de baleias, hash rate e como ler a blockchain" width="1200" height="630" style="width:100%;height:auto;border-radius:var(--radius-lg);">
+          <img src="/assets/images/onchain-card.webp" alt="Análise on-chain do Bitcoin: como ler fluxo de exchanges, endereços ativos, supply in profit e hash rate sem confundir comportamento com intenção" width="1200" height="630" style="width:100%;height:auto;border-radius:var(--radius-lg);">
         </figure>
 
         <div class="article-body">
 
           <div style="background:var(--color-surface);border-left:4px solid var(--color-primary);padding:var(--space-4);border-radius:var(--radius-md);margin-bottom:var(--space-6);">
             <strong style="display:block;margin-bottom:var(--space-2);">Resposta rápida</strong>
-            <p style="margin:0;">Comece pelo <strong>fluxo de cripto saindo das exchanges</strong> (sinal de acumulação), pelo acúmulo de baleias e pela tendência do hash rate. A lição que importa: <strong>nenhuma métrica funciona sozinha</strong> — alta de preço com saída de exchange é diferente de alta com entrada em massa. Leia as métricas juntas, como um quebra-cabeça, não como um oráculo.</p>
+            <p style="margin:0;">As métricas on-chain descrevem <strong>o que se moveu na rede</strong> — não por quê, nem o que vai acontecer depois. Para passar do comportamento à intenção (e da intenção ao preço), você precisa de evidência adicional. A regra de ouro: <strong>leia endereços como endereços, fluxo de exchange como estimativa, e nunca conclua "vai subir" ou "vai cair" a partir de um número isolado.</strong></p>
           </div>
 
           <nav class="article-toc" aria-label="Sumário do artigo">
             <h2 class="toc-title">📑 Sumário</h2>
             <ol>
-              <li><a href="#causa-efeito">On-chain mostra a causa, não o efeito</a></li>
-              <li><a href="#fluxo-exchange">Fluxo de exchanges: a métrica nº 1</a></li>
-              <li><a href="#baleias">Acumulação de baleias</a></li>
-              <li><a href="#hash-rate">Hash rate: por que a queda de 2026 também é informação</a></li>
-              <li><a href="#outras-metricas">Endereços ativos e HODL wave</a></li>
-              <li><a href="#ler-juntas">A armadilha da métrica isolada (como ler juntas)</a></li>
+              <li><a href="#comportamento-nao-intencao">On-chain mostra comportamento — não intenção</a></li>
+              <li><a href="#fluxo-exchange">Fluxo de exchanges (e por que é uma estimativa)</a></li>
+              <li><a href="#enderecos-grandes">Endereços grandes: concentração, não "baleias"</a></li>
+              <li><a href="#supply-profit">Supply in Profit: faixas, não regras</a></li>
+              <li><a href="#hash-rate">Hash rate: a queda de 2026 tem mais de uma causa</a></li>
+              <li><a href="#enderecos-ativos">Endereços ativos e HODL wave</a></li>
+              <li><a href="#endereco-nao-e-pessoa">Endereço não é pessoa</a></li>
+              <li><a href="#falsos-sinais">Como evitar falsos sinais</a></li>
               <li><a href="#faq">FAQ — Perguntas Frequentes</a></li>
             </ol>
           </nav>
 
-          <h2 id="causa-efeito">On-chain mostra a causa, não o efeito</h2>
-          <p>Existe uma diferença fundamental entre a <a href="/artigos/analise-tecnica-bitcoin.html">análise técnica</a> e a análise on-chain, e ela é mais simples do que parece. A análise técnica olha para o <strong>preço</strong> — o efeito. A análise on-chain olha para a <strong>atividade na rede</strong> — a causa. É como a diferença entre olhar para as ondas na superfície do mar e para as correntes que as produzem.</p>
-          <p>O preço pode ser manipulado, bombardeado por notícia ou puxado por uma única ordem grande. Mas uma transação registrada na blockchain é um fato: alguém moveu Bitcoin de um endereço para outro, e isso fica gravado para sempre. Essa transparência é o que torna o Bitcoin único — nenhuma bolsa de valores te deixa ver, em tempo real, o movimento de todas as carteiras dos grandes investidores.</p>
-          <p>O ponto de partida de quem está começando não é decorar dez métricas. É entender que cada métrica responde a uma pergunta específica. A partir daí, o valor está em <strong>cruzar as respostas</strong>, não em buscar "a métrica que prevê o preço" — porque essa, sozinha, não existe.</p>
+          <h2 id="comportamento-nao-intencao">On-chain mostra comportamento — não intenção</h2>
+          <p>Existe uma diferença real entre a <a href="/artigos/analise-tecnica-bitcoin.html">análise técnica</a> e a análise on-chain. A técnica olha para o <strong>preço</strong>; a on-chain olha para a <strong>atividade registrada na rede</strong>. Essa transparência é o que torna o Bitcoin único: nenhuma bolsa de valores te deixa ver, em tempo real, o movimento das carteiras dos grandes participantes.</p>
+          <p>Mas aqui está a armadilha que separa quem usa os dados direito de quem se engana:</p>
+          <div class="info-box warning">
+            <strong>O que a blockchain mostra:</strong> que BTC se moveu de um endereço para outro. Isso é um fato. <strong>O que ela <em>não</em> mostra automaticamente:</strong> por que se moveu, nem o que o proprietário fará depois. "Moveu" é comportamento; "pretende vender" é intenção — e o salto entre um e outro precisa de evidência extra.
+          </div>
+          <p>O preço pode ser puxado por notícia, por uma ordem grande ou por manipulação. A transação na blockchain, em contraste, é um fato gravado. O ponto de partida de quem está começando não é decorar dez métricas, e sim entender que <strong>cada métrica descreve um comportamento</strong>. O valor está em cruzar os dados e resistir à tentação de dar a cada número um "motivo" pronto.</p>
 
-          <h2 id="fluxo-exchange">Fluxo de exchanges: a métrica nº 1</h2>
-          <p>Se você só puder acompanhar uma métrica, acompanhe esta. O <strong>fluxo líquido de exchanges</strong> mede quanto BTC está entrando ou saindo das corretoras, e a lógica é direta:</p>
+          <h2 id="fluxo-exchange">Fluxo de exchanges (e por que é uma estimativa)</h2>
+          <p>O <strong>fluxo de exchanges</strong> é uma das métricas mais acompanhadas — e uma das mais mal lidas. Ele tenta medir quanto BTC está entrando ou saindo das corretoras, e a leitura apressada vira uma regra de compra e venda. A versão honesta é mais sóbria:</p>
           <ul>
-            <li><strong>BTC entrando nas exchanges ↗️:</strong> investidor deposita quando pretende <em>vender</em>. Mais depósitos = mais pressão de venda = sinal baixista.</li>
-            <li><strong>BTC saindo das exchanges ↘️:</strong> investidor saca quando pretende <em>guardar</em> (holding). Mais saques = menos oferta disponível para venda = sinal altista.</li>
+            <li><strong>Entradas em exchanges</strong> aumentam o BTC potencialmente disponível para negociação, <strong>mas não provam intenção de venda</strong>. Pode ser custódia, market maker, garantia (colateral), reorganização de carteiras ou liquidação OTC.</li>
+            <li><strong>Saídas das exchanges</strong> reduzem o saldo identificado nas corretoras, <strong>mas não provam acumulação de longo prazo</strong>. Um saque para carteira própria, para outro serviço ou para um custodiante institucional são coisas diferentes.</li>
           </ul>
-          <p><strong>Por que funciona:</strong> quando o BTC sai das corretoras, a oferta que pode ser vendida a qualquer momento diminui. Menos oferta com a mesma demanda tende a empurrar o preço para cima. Historicamente, os períodos de fluxo negativo mais forte — os grandes saques para carteiras próprias — antecederam as maiores altas do Bitcoin.</p>
+          <p><strong>E há uma camada que quase ninguém menciona:</strong> a blockchain não marca "este é um endereço da Binance". Empresas como Glassnode e CryptoQuant chegam ao "saldo nas exchanges" usando <strong>rótulos de endereços, agrupamento (clustering) e heurísticas</strong>. Isso funciona bem, mas é uma estimativa: quando os rótulos mudam, o balanço e o netflow são revisados retroativamente. Ou seja, o número que você vê hoje pode ser corrigido amanhã.</p>
           <div class="info-box tip">
-            <strong>Como acompanhar de graça:</strong> o CryptoQuant mostra o fluxo de exchanges (e as reservas totais nas corretoras) na versão gratuita. O número isolado de um dia engana; olhe a <strong>tendência de 7 ou 30 dias</strong>, que suaviza o ruído.
+            <strong>Como acompanhar de graça:</strong> o CryptoQuant mostra o fluxo de exchanges (e as reservas totais) na versão gratuita. O número de um único dia engana; olhe a <strong>tendência de 7 ou 30 dias</strong>, que suaviza o ruído — e trate o valor como estimativa, não como contagem exata.
           </div>
 
-          <h2 id="baleias">Acumulação de baleias</h2>
-          <p>"Baleias" são os endereços que detêm quantidades grandes de Bitcoin — normalmente os que têm mais de 1.000 BTC. Monitorá-las faz sentido por um motivo prático: são poucos endereços movendo muito dinheiro, e o comportamento deles costuma antecipar o do mercado como um todo.</p>
+          <h2 id="enderecos-grandes">Endereços grandes: concentração, não "baleias"</h2>
+          <p>Os chamados "endereços de baleia" — normalmente os com mais de 1.000 BTC — são populares por um motivo prático: poucos endereços movem muito valor. Mas existe uma confusão embutida no próprio nome.</p>
+          <p><strong>Endereço não é pessoa.</strong> Um único endereço de exchange pode concentrar ativos de milhões de clientes. Um custodiante de ETF pode manter uma montanha de BTC em poucas carteiras. E um único investidor pode, na prática, espalhar suas moedas por dezenas de endereços. Por isso:</p>
           <ul>
-            <li>Se o <strong>número de endereços com +1.000 BTC está subindo</strong>, é sinal de que grandes compradores estão entrando — um voto de confiança.</li>
-            <li>Se esse número está caindo, é sinal de que as baleias estão vendendo ou distribuindo posições.</li>
+            <li>O <strong>número de endereços com +1.000 BTC subindo</strong> indica <em>concentração possível</em> — mas não pode ser lido diretamente como "grandes compradores estão entrando".</li>
+            <li>O <strong>número caindo</strong> indica redistribuição — mas não prova que "as baleias estão vendendo".</li>
           </ul>
-          <p>Uma métrica relacionada e muito útil é o <strong>"Supply in Profit"</strong>: a porcentagem dos BTC em circulação que está no lucro. Quando ela cai abaixo de ~50%, historicamente houve bons momentos de compra (o pessimismo estava no pico). Quando sobe acima de ~95%, o mercado pode estar perto de um topo (todo mundo já está no lucro e propenso a realizar).</p>
+          <p>Para chegar mais perto do que realmente acontece, as empresas de análise tentam <strong>agrupar endereços em entidades</strong> (uma exchange, um fundo, um minerador). É esse ajuste — o <em>entity adjustment</em> — que transforma "endereços" em algo mais próximo de "participantes". Útil, mas imperfeito, como você verá na seção <a href="#endereco-nao-e-pessoa">Endereço não é pessoa</a>.</p>
 
-          <h2 id="hash-rate">Hash rate: por que a queda de 2026 também é informação</h2>
-          <p>O <strong>hash rate</strong> mede o poder computacional total que protege a rede Bitcoin. É um indicador de segurança e da confiança dos mineradores — e, como quase toda métrica on-chain, ele conta uma história se você souber ler além do número.</p>
-          <p>E aqui está um exemplo real e recente de como ler errado. Depois de atingir um pico acima de <strong>1.000 EH/s (exahashes por segundo)</strong> no fim de 2025, o hash rate recuou para a faixa de <strong>~850–930 EH/s em meados de 2026</strong> — uma queda de cerca de 17% a 19%. Uma leitura apressada diria "a rede está enfraquecendo, sinal de crise". A leitura correta é outra: <strong>os mineradores estão migrando capacidade para data centers de inteligência artificial</strong>, onde o retorno por megawatt é maior. Ou seja, a queda não é sobre o Bitcoin estar morrendo — é sobre capital indo atrás de retorno melhor em outro lugar.</p>
-          <p>A lição vale para todas as métricas: <strong>o número nunca fala sozinho, ele sempre precisa de uma interpretação.</strong> Hash rate alto = rede mais cara de atacar. Hash rate caindo = pode ser problema, ou pode ser só migração econômica.</p>
+          <h2 id="supply-profit">Supply in Profit: faixas, não regras</h2>
+          <p>O <strong>Supply in Profit</strong> mede a porcentagem dos BTC em circulação cujo preço de aquisição (estimado) está abaixo do preço atual. As duas faixas mais citadas — abaixo de ~50% e acima de ~95% — são úteis, mas costumam virar regra de "compre no fundo, venda no topo". A leitura honesta é outra:</p>
+          <ul>
+            <li><strong>Abaixo de ~50%:</strong> historicamente apareceu em regimes de forte estresse e capitulação. Isso descreve um estado de mercado, <strong>mas não identifica sozinho um fundo</strong>.</li>
+            <li><strong>Acima de ~95%:</strong> aparece em momentos de lucro generalizado. <strong>Mas o indicador pode continuar alto por meses</strong> — "todo mundo no lucro" não é, por si só, um cronômetro de topo.</li>
+          </ul>
+          <p>A lição é a mesma do fluxo de exchanges: essas faixas descrevem <strong>regimes</strong>, não pontos de virada com data marcada.</p>
 
-          <h2 id="outras-metricas">Endereços ativos e HODL wave</h2>
-          <p>Faltam duas métricas que completam o quadro:</p>
-          <p><strong>Endereços ativos</strong> contam quantos endereços únicos participaram de transações num dia — é o equivalente on-chain aos "usuários ativos" de um aplicativo. Mais endereços ativos = mais adoção real = sinal altista de longo prazo. Em 2026, a rede Bitcoin processa cerca de <strong>800 mil a 1,1 milhão de endereços ativos por dia</strong>, com picos coincidindo com momentos de euforia.</p>
-          <p><strong>HODL wave</strong> mostra há quanto tempo os Bitcoins estão parados. Quando uma fatia grande da oferta não se move há mais de um ano, significa que os holders de longo prazo estão acumulando e se recusando a vender mesmo na volatilidade. Quando esses BTC "antigos" de repente começam a se mover, é um sinal de que os holders estão realizando lucro — o que pode indicar um topo.</p>
+          <h2 id="hash-rate">Hash rate: a queda de 2026 tem mais de uma causa</h2>
+          <p>O <strong>hash rate</strong> mede o poder computacional que protege a rede Bitcoin. É um indicador de segurança e da disposição dos mineradores em investir — e, como quase toda métrica on-chain, ele só conta uma história quando você resiste à explicação única.</p>
+          <p>O exemplo recente: depois de um pico acima de <strong>1.000 EH/s (exahashes por segundo)</strong> no fim de 2025, o hash rate recuou para cerca de <strong>850–930 EH/s em meados de 2026</strong>. A leitura apressada diz "a rede está em crise"; a leitura de causa única diz "é tudo migração para IA". Nenhuma das duas está completa.</p>
+          <p>O que de fato acontece: <strong>parte dos mineradores redirecionou capital, capacidade de energia e instalações de data center para HPC/IA</strong>, onde o retorno por megawatt pode ser maior. Mas atenção ao detalhe: <strong>os ASICs de Bitcoin não são usados diretamente para treinar IA</strong> — a migração é de infraestrutura e capital, não de máquina para outra finalidade. Além disso, o hash rate responde a várias outras forças ao mesmo tempo: <strong>preço do BTC, dificuldade, custo de energia e eficiência das máquinas</strong>.</p>
+          <p>A lição vale para todas as métricas: <strong>o número nunca fala sozinho.</strong> Hash rate alto = rede mais cara de atacar. Hash rate caindo = pode ser problema, ou pode ser uma combinação de preço, energia e realocação de capital.</p>
 
-          <h2 id="ler-juntas">A armadilha da métrica isolada (como ler juntas)</h2>
-          <p>É aqui que a maioria erra. Uma única métrica sempre permite contar a história que você quiser. Fluxo de exchanges negativo soa altista — mas e se, ao mesmo tempo, as baleias estiverem vendendo e os endereços ativos despencando? O quadro muda. O método correto é montar um <strong>painel com três ou quatro sinais apontando na mesma direção</strong> antes de tirar qualquer conclusão:</p>
+          <h2 id="enderecos-ativos">Endereços ativos e HODL wave</h2>
+          <p>Duas métricas que completam o quadro — e que carregam dois dos mal-entendidos mais comuns.</p>
+          <p><strong>Endereços ativos</strong> contam quantos endereços únicos participaram de transações num período. O erro é traduzir isso como "usuários ativos de um aplicativo". Não é:</p>
+          <ul>
+            <li><strong>Endereços ativos medem endereços, não pessoas.</strong> Um usuário pode controlar vários endereços, e uma exchange pode representar muitos usuários com poucas carteiras.</li>
+            <li>Mais endereços ativos = mais atividade na rede. É um dado real, mas a distância entre "mais endereços" e "mais adoção por pessoas" é maior do que parece.</li>
+          </ul>
+          <p><strong>HODL wave</strong> mostra há quanto tempo os Bitcoins estão parados. O mesmo cuidado vale aqui:</p>
+          <ul>
+            <li>Moedas antigas que <strong>não se moveram</strong> só provam que "não se moveram". Isso não é o mesmo que "holder está convicto e vai segurar para sempre".</li>
+            <li>Moedas antigas que <strong>começam a se mover</strong> só provam que se moveram. Não é, automaticamente, "holder realizando lucro no topo" — pode ser migração de custódia, reorganização ou outra coisa.</li>
+          </ul>
+
+          <h2 id="endereco-nao-e-pessoa">Endereço não é pessoa</h2>
+          <p>Este é o conceito que eleva o nível da leitura on-chain — e que está ausente da maioria dos textos sobre o assunto.</p>
+          <p>O Bitcoin registra <strong>UTXOs e endereços</strong>, não "contas de investidores". Isso tem consequências profundas:</p>
+          <ul>
+            <li><strong>Uma pessoa pode controlar dezenas de endereços</strong>, e um "endereço grande" pode, na verdade, ser um punhado de endereços de uma mesma entidade.</li>
+            <li><strong>Uma exchange pode concentrar ativos de milhões de clientes em poucas carteiras</strong> — então "uma baleia moveu 5.000 BTC" às vezes é só uma corretora reorganizando sua custódia interna.</li>
+          </ul>
+          <p>Para reduzir esse erro, as empresas de análise usam <strong>heurísticas de agrupamento</strong>: por exemplo, a heurística de "gasto comum" (se vários endereços aparecem juntos como entradas de uma transação, provavelmente pertencem à mesma entidade) e o rastreamento de troco (change). Com isso, transformam endereços em <strong>entidades</strong> aproximadas. É um avanço real — mas continua sendo uma aproximação baseada em suposições, e pode errar.</p>
+          <p>Na prática: quando você vê "as baleias compraram", a pergunta certa é <em>"isso é uma pessoa, uma exchange ou um artefato de como os endereços foram agrupados?"</em> Na maioria das vezes, a resposta honesta é "não dá para saber com certeza".</p>
+
+          <h2 id="falsos-sinais">Como evitar falsos sinais</h2>
+          <p>É aqui que a maioria erra: uma métrica isolada sempre permite contar a história que você quiser. O antídoto não é decorar mais indicadores, e sim <strong>saber o que cada um pode significar — e o que pode te confundir</strong>.</p>
 
           <table class="comparison-table">
             <thead>
               <tr>
-                <th>Sinal</th>
-                <th>Cenário de acumulação (altista)</th>
-                <th>Cenário de distribuição (baixista)</th>
+                <th>Métrica</th>
+                <th>Leitura possível</th>
+                <th>O que pode confundir</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Fluxo de exchanges</td>
-                <td>BTC saindo (negativo)</td>
-                <td>BTC entrando (positivo)</td>
+                <td>Exchange outflow</td>
+                <td>menor saldo identificado nas exchanges</td>
+                <td>custódia / transferência interna</td>
               </tr>
               <tr>
-                <td>Endereços +1.000 BTC</td>
-                <td>Subindo</td>
-                <td>Caindo</td>
+                <td>Grandes endereços ↑</td>
+                <td>concentração possível</td>
+                <td>carteiras de exchange / ETF</td>
               </tr>
               <tr>
-                <td>Supply in Profit</td>
-                <td>Baixo (&lt;50%)</td>
-                <td>Muito alto (&gt;95%)</td>
+                <td>Supply in Profit &gt;95%</td>
+                <td>lucro agregado elevado</td>
+                <td>pode continuar alto por meses</td>
               </tr>
               <tr>
-                <td>BTC antigos (HODL wave)</td>
-                <td>Parados, acumulando</td>
-                <td>Começando a se mover</td>
+                <td>Moedas antigas movendo</td>
+                <td>mudança no comportamento das moedas</td>
+                <td>migração de custódia</td>
+              </tr>
+              <tr>
+                <td>Active addresses ↑</td>
+                <td>mais atividade</td>
+                <td>endereço ≠ usuário</td>
               </tr>
             </tbody>
           </table>
 
-          <p>Quando dois ou três sinais apontam na mesma direção, você tem uma tese. Quando eles se contradizem, o honesto é não ter tese nenhuma — e, em investimento, não fazer nada também é uma decisão. Ferramentas gratuitas para montar esse painel: <strong>Glassnode</strong> (versão gratuita com atraso de 24h), <strong>CryptoQuant</strong> (fluxo de exchanges), <strong>CoinMetrics</strong> (dados históricos) e o explorador da <strong>Blockchain.com</strong> para consultar transações individuais.</p>
+          <p>Quando várias leituras apontam para a mesma direção — e você já considerou as explicações alternativas — você tem uma hipótese, não uma certeza. Quando os sinais se contradizem, o honesto é não ter tese nenhuma. E, em investimento, <strong>não fazer nada também é uma decisão</strong>. Ferramentas gratuitas para montar esse quadro: <strong>Glassnode</strong> (versão gratuita com atraso de 24h), <strong>CryptoQuant</strong> (fluxo de exchanges), <strong>CoinMetrics</strong> (dados históricos) e o explorador da <strong>Blockchain.com</strong> para transações individuais.</p>
           <div class="info-box warning">
-            <strong>⚠️ O que a análise on-chain NÃO é:</strong> não é bola de cristal. Ela descreve o comportamento atual, não prevê o futuro com certeza. Use-a como um termômetro que complementa o <a href="/artigos/como-analisar-criptomoedas.html">fundamentalismo</a> e o <a href="/artigos/bitcoin-guia-completo.html">entendimento do ativo</a> — nunca como um sinal isolado de compra ou venda.
+            <strong>⚠️ O que a análise on-chain NÃO é:</strong> não é bola de cristal. Ela descreve o comportamento registrado na rede — não prevê o futuro, e não lê a mente de ninguém. Use-a como um termômetro que complementa o <a href="/artigos/como-analisar-criptomoedas.html">fundamentalismo</a> e o <a href="/artigos/bitcoin-guia-completo.html">entendimento do ativo</a> — nunca como um sinal isolado de compra ou venda.
           </div>
 
           <h2 id="faq">❓ FAQ — Perguntas Frequentes</h2>
 
           <div class="faq-item">
             <h3>O que são métricas on-chain?</h3>
-            <p>São dados extraídos diretamente da blockchain — o registro público e imutável de todas as transações. Incluem transações, endereços ativos, fluxo de exchanges, saldo de carteiras e hash rate. Diferente da análise técnica, que olha para o preço (o efeito), a on-chain olha para a atividade real da rede (a causa).</p>
+            <p>São dados extraídos diretamente da blockchain — o registro público de todas as transações. Incluem fluxo de exchanges, endereços ativos, saldo de carteiras, supply in profit e hash rate. O ponto essencial é o que elas mostram: <strong>a blockchain registra que BTC se moveu, mas não revela automaticamente por que se moveu nem o que o dono fará depois.</strong></p>
           </div>
           <div class="faq-item">
             <h3>Qual a métrica on-chain mais importante?</h3>
-            <p>Para iniciantes, o fluxo líquido de exchanges. BTC saindo = investidores retirando para guardar (sinal altista); BTC entrando = investidores depositando para vender (sinal baixista). É a métrica mais direta e mais correlacionada com movimentos de preço.</p>
+            <p>Não existe uma única métrica que prevê preço sozinha. O fluxo de exchanges é das mais acompanhadas, mas é uma estimativa (as exchanges são identificadas por heurísticas, não marcadas na blockchain). O valor está em cruzar várias métricas e, antes de qualquer conclusão, lembrar que <strong>endereço não é pessoa e comportamento não é intenção</strong>.</p>
           </div>
           <div class="faq-item">
             <h3>Fluxo de exchange negativo é bom para o Bitcoin?</h3>
-            <p>Sim, em geral. Significa mais BTC saindo das corretoras do que entrando — investidores guardando em carteira própria, reduzindo a oferta disponível para venda. Historicamente precedeu altas. Mas é sinal de contexto, não garantia: uma métrica sozinha não compra nem vende por você.</p>
+            <p>Não dá para afirmar isso como regra. Saída de BTC das exchanges reduz o saldo identificado nas corretoras, o que costuma ser lido como menos oferta disponível para venda. Mas isso <strong>não prova acumulação de longo prazo</strong>: pode ser custódia, transferência interna, reorganização de carteiras ou liquidação OTC. É um dado de contexto, não um sinal isolado.</p>
           </div>
           <div class="faq-item">
             <h3>O hash rate do Bitcoin caiu em 2026? Por quê?</h3>
-            <p>Sim. Depois de pico acima de 1.000 EH/s no fim de 2025, recuou para ~850–930 EH/s em meados de 2026 (queda de ~17–19%). O motivo é econômico: mineradores migrando capacidade para data centers de IA, onde o retorno por megawatt é maior. Não é sinal de rede em colapso, e sim de capital indo atrás de retorno melhor.</p>
+            <p>Depois de um pico acima de 1.000 EH/s no fim de 2025, o hash rate recuou para cerca de 850–930 EH/s em meados de 2026. Parte da explicação é econômica: alguns mineradores redirecionaram capital, energia e instalações para data centers de HPC/IA. Mas <strong>ASICs de Bitcoin não são usados diretamente para treinar IA</strong>, e o hash rate também responde ao preço do BTC, à dificuldade, ao custo de energia e à eficiência das máquinas.</p>
           </div>
           <div class="faq-item">
             <h3>Como saber se baleias estão comprando Bitcoin?</h3>
-            <p>Acompanhe dois sinais juntos: o número de endereços com +1.000 BTC (no Glassnode) e o fluxo líquido de exchanges. Se os endereços grandes aumentam enquanto o saldo de BTC nas corretoras cai, é sinal de acumulação.</p>
+            <p>Com cautela: <strong>um endereço com +1.000 BTC não é uma pessoa</strong>. Pode ser uma exchange (representando milhões de clientes), um custodiante de ETF ou uma entidade que controla vários endereços. O aumento de endereços grandes indica concentração possível, não necessariamente "grandes compradores entrando". Para interpretar, é preciso agrupar endereços em entidades — um processo útil, mas imperfeito.</p>
           </div>
           <div class="faq-item">
             <h3>Preciso pagar para ver métricas on-chain?</h3>
-            <p>Não. Glassnode, CryptoQuant e CoinMetrics têm planos gratuitos com as métricas essenciais. Para transações individuais, o explorador da Blockchain.com é gratuito. A versão paga adiciona mais dados e tempo real, mas a gratuita cobre a maioria dos casos.</p>
+            <p>Não. Glassnode, CryptoQuant e CoinMetrics têm planos gratuitos com as métricas essenciais (algumas com atraso de 24h). Para consultar transações e endereços individuais, o explorador da Blockchain.com é gratuito. A versão paga adiciona mais dados e tempo real, mas a gratuita cobre a maioria dos casos.</p>
           </div>
 
         </div>
@@ -263,9 +300,10 @@
         <div style="margin-top:var(--space-8);padding:var(--space-6);background:var(--color-surface);border-radius:var(--radius-lg);">
           <h2 style="margin-bottom:var(--space-3);">📚 Fontes e Referências</h2>
           <ul style="font-size:var(--text-sm);color:var(--color-text-secondary);margin:0;padding-left:var(--space-5);line-height:1.8;">
-            <li><a href="https://studio.glassnode.com/" target="_blank" rel="noopener">Glassnode</a>: hash rate, fluxo de exchanges e acumulação de baleias</li>
-            <li><a href="https://cryptoquant.com/" target="_blank" rel="noopener">CryptoQuant</a>: reservas em exchanges e fluxo de mineradores</li>
+            <li><a href="https://studio.glassnode.com/" target="_blank" rel="noopener">Glassnode</a>: hash rate, fluxo de exchanges, supply in profit e agrupamento de entidades</li>
+            <li><a href="https://cryptoquant.com/" target="_blank" rel="noopener">CryptoQuant</a>: reservas em exchanges, fluxo e rótulos de endereços</li>
             <li><a href="https://www.coinwarz.com/mining/bitcoin/hashrate-chart" target="_blank" rel="noopener">CoinWarz</a>: série histórica do hash rate do Bitcoin (~850–930 EH/s, ago/2026)</li>
+            <li><a href="https://www.blockchain.com/explorer" target="_blank" rel="noopener">Blockchain.com Explorer</a>: consulta de transações, endereços e UTXOs</li>
           </ul>
         </div>
 
@@ -277,7 +315,7 @@
           <h2 style="margin-bottom:var(--space-5);">📚 Artigos Relacionados</h2>
           <div class="articles-grid">
             <article class="article-card"><span class="article-category">Análise</span><h3><a href="/artigos/analise-tecnica-bitcoin.html">Análise Técnica do Bitcoin</a></h3><p>A outra lente: suporte, resistência, RSI e médias móveis explicados do zero.</p></article>
-            <article class="article-card"><span class="article-category">Investimento</span><h3><a href="/artigos/como-analisar-criptomoedas.html">Como Analisar Criptomoedas</a></h3><p>Os 7 fatores fundamentais para avaliar qualquer projeto, além do gráfico.</p></article>
+            <article class="article-card"><span class="article-category">Investimento</span><h3><a href="/artigos/como-analisar-criptomoedas.html">Como Analisar Criptomoedas</a></h3><p>Os fatores fundamentais para avaliar qualquer projeto, além do gráfico e da rede.</p></article>
             <article class="article-card"><span class="article-category">Guia</span><h3><a href="/artigos/bitcoin-guia-completo.html">Bitcoin (BTC)</a></h3><p>Entenda o ativo por trás dos dados antes de mergulhar nas métricas.</p></article>
             <article class="article-card"><span class="article-category">Investimento</span><h3><a href="/artigos/dca-bitcoin-como-investir-todo-mes.html">DCA em Bitcoin: Como Investir Todo Mês</a></h3><p>O método que tira a ansiedade de acertar o "momento certo".</p></article>
             <article class="article-card"><span class="article-category">Guia</span><h3><a href="/artigos/como-comprar-criptomoedas-brasil.html">Como Comprar Bitcoin no Brasil</a></h3><p>O passo a passo da primeira compra, do PIX ao saque.</p></article>
@@ -295,12 +333,14 @@
         <div style="padding:var(--space-6);background:var(--color-surface);border-radius:var(--radius-lg);">
           <h3 style="margin-bottom:var(--space-3);">📑 Sumário</h3>
           <nav><ol style="padding-left:var(--space-5);font-size:var(--text-sm);line-height:2;">
-            <li><a href="#causa-efeito">Causa, não efeito</a></li>
+            <li><a href="#comportamento-nao-intencao">Comportamento, não intenção</a></li>
             <li><a href="#fluxo-exchange">Fluxo de exchanges</a></li>
-            <li><a href="#baleias">Baleias</a></li>
+            <li><a href="#enderecos-grandes">Endereços grandes</a></li>
+            <li><a href="#supply-profit">Supply in Profit</a></li>
             <li><a href="#hash-rate">Hash rate</a></li>
-            <li><a href="#outras-metricas">Outras métricas</a></li>
-            <li><a href="#ler-juntas">Ler juntas</a></li>
+            <li><a href="#enderecos-ativos">Endereços ativos</a></li>
+            <li><a href="#endereco-nao-e-pessoa">Endereço não é pessoa</a></li>
+            <li><a href="#falsos-sinais">Evitar falsos sinais</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ol></nav>
         </div>
@@ -311,7 +351,7 @@
         </div>
       </aside>
     </div>
-  
+
 <!-- Autor -->
 <div class="author-box" style="margin:var(--space-6) 0 0;padding:var(--space-6);background:var(--color-surface);border-radius:var(--radius-lg);display:flex;gap:var(--space-4);align-items:flex-start;">
   <img src="../assets/images/author-avatar.svg" alt="Ana Costa" style="width:52px;height:52px;border-radius:50%;flex-shrink:0;">
