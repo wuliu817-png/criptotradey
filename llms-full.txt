@@ -22,7 +22,7 @@
 
 ## Artigos
 
-- [Como Sacar USDT da Binance para Outra Carteira](https://criptotradey.com/artigos/como-sacar-usdt-binance/): Endereço de destino, escolha da rede (TRC20/BEP20/ERC20), taxas, tempo de chegada e os erros que fazem o saldo não aparecer.
+- [Como Sacar USDT da Binance para Outra Carteira: Redes, Taxas e Cuidados](https://criptotradey.com/artigos/como-sacar-usdt-binance/): Conferir endereço e rede (TRC20/BEP20/ERC20), taxas, mínimo de saque e o que fazer quando o saldo não aparece.
 - [Bitcoin: O Guia Mais Completo para Iniciantes em 2026](https://criptotradey.com/artigos/bitcoin-guia-completo.html): O que é Bitcoin, como funciona a blockchain, como comprar BTC com segurança no Brasil e melhores carteiras.
 - [Ethereum (ETH): Guia Completo para Iniciantes 2026](https://criptotradey.com/artigos/ethereum-guia-completo.html): O que é Ethereum, como comprar ETH, diferenças do Bitcoin, staking, gas fees e ETFs.
 - [Solana (SOL): Vale a Pena Investir em 2026?](https://criptotradey.com/artigos/solana-guia-completo.html): Para quem a SOL faz sentido, Solana vs Ethereum, como comprar e riscos reais.
