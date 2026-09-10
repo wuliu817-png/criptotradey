@@ -18,8 +18,8 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="article:published_time" content="2026-09-11T08:00:00-03:00">
   <meta property="article:author" content="Ana Costa">
-  <meta property="og:image" content="https://criptotradey.com/assets/images/usdt-stablecoins-cover.webp">
-  <meta name="twitter:image" content="https://criptotradey.com/assets/images/usdt-stablecoins-cover.webp">
+  <meta property="og:image" content="https://criptotradey.com/assets/images/usdt-trc20-ou-bep20-cover.webp">
+  <meta name="twitter:image" content="https://criptotradey.com/assets/images/usdt-trc20-ou-bep20-cover.webp">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="USDT TRC20 ou BEP20: diferenças, taxas e qual rede escolher">
   <meta name="twitter:description" content="Diferenças, taxas e compatibilidade entre TRC20 e BEP20, e a regra que evita a rede errada.">
@@ -34,7 +34,7 @@
     "datePublished": "2026-09-11T08:00:00-03:00",
     "dateModified": "2026-09-11T08:00:00-03:00",
     "publisher": { "@type": "Organization", "name": "CriptoTradey" },
-    "image": "https://criptotradey.com/assets/images/usdt-stablecoins-cover.webp",
+    "image": "https://criptotradey.com/assets/images/usdt-trc20-ou-bep20-cover.webp",
     "articleSection": "Stablecoins",
     "inLanguage": "pt-BR",
     "mainEntityOfPage": { "@type": "WebPage", "@id": "https://criptotradey.com/artigos/usdt-trc20-ou-bep20/" }
@@ -53,6 +53,10 @@
       {
         "@type": "Question", "name": "BEP20 é a mesma coisa que ERC20?",
         "acceptedAnswer": { "@type": "Answer", "text": "Não. As duas usam o mesmo formato de endereço (começam com 0x), mas rodam em blockchains diferentes: BEP20 na BNB Smart Chain, ERC20 na Ethereum. Por terem o mesmo formato, é exatamente entre elas que o erro de rede mais acontece — o endereço cola e parece certo, mas a rede é outra." }
+      },
+      {
+        "@type": "Question", "name": "Como saber se meu USDT é TRC20 ou BEP20?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Veja a rede indicada na carteira ou corretora onde o USDT está depositado. Endereços TRC20 normalmente começam com T, enquanto endereços da BNB Smart Chain usam 0x. Mas o formato do endereço sozinho não basta para identificar a rede: confirme sempre o nome da rede exibido pela plataforma." }
       },
       {
         "@type": "Question", "name": "Posso enviar USDT da TRC20 para BEP20 direto?",
@@ -138,7 +142,7 @@
         </header>
 
         <figure class="article-hero">
-          <img src="/assets/images/usdt-stablecoins-cover.webp" alt="USDT TRC20 ou BEP20: diferenças, taxas e qual rede escolher" width="1200" height="630" style="width:100%;height:auto;border-radius:var(--radius-lg);">
+          <img src="/assets/images/usdt-trc20-ou-bep20-cover.webp" alt="USDT TRC20 ou BEP20: diferenças, taxas e qual rede escolher" width="1200" height="630" style="width:100%;height:auto;border-radius:var(--radius-lg);">
         </figure>
 
         <div class="article-body">
@@ -202,7 +206,7 @@
             <tbody>
               <tr><td style="padding:10px;"><strong>Formato do endereço</strong></td><td style="padding:10px;">começa com "T" · 34 caracteres</td><td style="padding:10px;">começa com "0x" · 42 caracteres</td></tr>
               <tr><td style="padding:10px;"><strong>Custo on-chain</strong></td><td style="padding:10px;">variável — depende de Energy/Bandwidth</td><td style="padding:10px;">frações de dólar (pago em BNB)</td></tr>
-              <tr><td style="padding:10px;"><strong>Tempo de confirmação</strong></td><td style="padding:10px;">segundos (blocos de ~3 s)</td><td style="padding:10px;">segundos (blocos de ~3 s)</td></tr>
+              <tr><td style="padding:10px;"><strong>Tempo de confirmação</strong></td><td style="padding:10px;">segundos (blocos de ~3 s)</td><td style="padding:10px;">confirmações rápidas; blocos de ~0,45 s</td></tr>
               <tr><td style="padding:10px;"><strong>Moeda usada para pagar a taxa</strong></td><td style="padding:10px;">TRX</td><td style="padding:10px;">BNB</td></tr>
               <tr><td style="padding:10px;"><strong>Aceitação</strong></td><td style="padding:10px;">amplamente aceita em corretoras e carteiras</td><td style="padding:10px;">muito comum em fluxos ligados à Binance</td></tr>
               <tr><td style="padding:10px;"><strong>Relação com ERC20</strong></td><td style="padding:10px;">endereço diferente ("T" × "0x")</td><td style="padding:10px;">mesmo formato de endereço do ERC20</td></tr>
@@ -214,7 +218,7 @@
           <p>Existem duas taxas diferentes que muita gente junta numa só, e separá-las evita surpresa:</p>
           <ul>
             <li><strong>A taxa da rede (on-chain):</strong> é o que a própria blockchain cobra para processar a transação. Na BEP20 ela é baixa — frações de dólar, pagas em BNB. Na rede Tron, o custo não é um valor fixo em dólares: ele depende dos recursos de <strong>Energy/Bandwidth</strong> disponíveis na carteira e das condições da rede.</li>
-            <li><strong>A taxa de saque da corretora:</strong> quando você envia de uma corretora, ela cobra um valor próprio por retirada, definido pela própria plataforma. Esse valor pode ser diferente do custo on-chain e não muda com o congestionamento da rede. É por isso que "BEP20 é de graça" engana: a rede pode ser barata, mas a corretora ainda cobra o saque dela.</li>
+            <li><strong>A taxa de saque da corretora:</strong> quando você envia de uma corretora, ela cobra um valor definido pela própria plataforma. Esse valor não é necessariamente igual ao custo on-chain e pode ser ajustado pela corretora ao longo do tempo. É por isso que "BEP20 é de graça" engana: a rede pode ser barata, mas a corretora ainda cobra o saque dela.</li>
           </ul>
           <p>Para não misturar os dois, veja o que você paga em cada direção:</p>
 
@@ -233,10 +237,10 @@
           <h2 id="moeda-da-taxa">O detalhe da moeda da taxa (TRX e BNB)</h2>
           <p>Numa carteira própria, você não paga a taxa com USDT — paga com a <strong>moeda nativa da rede</strong>: TRX na Tron, BNB na BNB Smart Chain. Isso cria uma armadilha silenciosa para quem acabou de receber USDT:</p>
           <p><strong>você recebe USDT numa carteira nova e, na hora de movê-lo, percebe que a carteira não tem a moeda nativa para pagar a taxa.</strong> O saldo está lá, mas você precisa de um pouco de TRX ou de BNB para conseguir enviá-lo.</p>
-          <p>Na Tron o modelo nem se chama "gas": o envio consome <strong>Energy e Bandwidth</strong>, recursos ligados ao TRX que a conta mantém. Na BNB Smart Chain é mais parecido com o gas da Ethereum, pago em BNB. A lição prática é a mesma para as duas: <strong>toda carteira que você controla deve ter uma pequena reserva da moeda nativa</strong> — TRX ou BNB — junto do USDT. Se você ainda não usa carteira própria, o guia de <a href="/artigos/carteiras-criptomoedas-guia.html">carteiras de criptomoedas</a> mostra as diferenças entre hot e cold wallet.</p>
+          <p>Na Tron, as transações usam recursos chamados <strong>Energy e Bandwidth</strong>. Esses recursos podem ser obtidos por staking de TRX ou delegados por outra conta; quando não são suficientes, pode haver consumo de TRX para concluir a operação. Na BNB Smart Chain é mais parecido com o gas da Ethereum, pago em BNB. A lição prática é a mesma para as duas: <strong>toda carteira que você controla deve ter uma pequena reserva da moeda nativa</strong> — TRX ou BNB — junto do USDT. Se você ainda não usa carteira própria, o guia de <a href="/artigos/carteiras-criptomoedas-guia.html">carteiras de criptomoedas</a> mostra as diferenças entre hot e cold wallet.</p>
 
           <h2 id="tempo">Quanto tempo demora</h2>
-          <p>Na velocidade pura da rede, TRC20 e BEP20 são praticamente iguais: as duas confirmam em segundos, porque usam blocos rápidos (cerca de 3 segundos). Para efeito prático, <strong>a rede raramente é o que atrasa a transferência</strong> entre essas duas.</p>
+          <p>Na prática, tanto TRC20 quanto BEP20 oferecem confirmações rápidas. O tempo percebido pelo usuário também depende da carteira ou corretora de destino e da quantidade de confirmações exigidas antes de liberar o saldo.</p>
           <p>O que muda o tempo real é a outra ponta:</p>
           <ul>
             <li><strong>Carteira própria:</strong> o saldo costuma aparecer logo após as confirmações.</li>
@@ -280,6 +284,10 @@
             <p>Não. As duas usam o mesmo formato de endereço (começam com 0x), mas rodam em blockchains diferentes: BEP20 na BNB Smart Chain, ERC20 na Ethereum. Por terem o mesmo formato, é exatamente entre elas que o erro de rede mais acontece.</p>
           </div>
           <div class="faq-item">
+            <h3>Como saber se meu USDT é TRC20 ou BEP20?</h3>
+            <p>Veja a rede indicada na carteira ou corretora onde o USDT está depositado. Endereços TRC20 normalmente começam com "T", enquanto endereços da BNB Smart Chain usam "0x". Mas o formato do endereço sozinho não basta para identificar a rede: confirme sempre o nome da rede exibido pela plataforma.</p>
+          </div>
+          <div class="faq-item">
             <h3>Posso enviar USDT da TRC20 para BEP20 direto?</h3>
             <p>Não. O USDT da Tron e o da BNB Smart Chain são saldos separados, mesmo sendo o mesmo token. Para levar de uma rede para outra você precisa de uma ponte (bridge) ou passar por uma corretora que faça a conversão.</p>
           </div>
@@ -304,7 +312,9 @@
           <li><a href="https://tether.to/" target="_blank" rel="noopener">Tether — site oficial do emissor do USDT</a></li>
           <li><a href="https://www.binance.com/en/fee/cryptoFee" target="_blank" rel="noopener">Binance — taxas e mínimos de saque de criptomoedas</a></li>
           <li><a href="https://tron.network/" target="_blank" rel="noopener">TRON — site oficial da rede TRC20</a></li>
+          <li><a href="https://developers.tron.network/docs/bandwidth-and-energy" target="_blank" rel="noopener">TRON Developer Hub — Bandwidth e Energy</a></li>
           <li><a href="https://www.bnbchain.org/" target="_blank" rel="noopener">BNB Chain — site oficial da rede BEP20</a></li>
+          <li><a href="https://docs.bnbchain.org/bnb-smart-chain/introduction/" target="_blank" rel="noopener">BNB Chain Docs — tempo de bloco da BNB Smart Chain</a></li>
           <li><a href="https://www.binance.com/en/academy/articles/how-do-crypto-address-poisoning-attacks-work" target="_blank" rel="noopener">Binance Academy — como funcionam os ataques de "address poisoning"</a></li>
           <li><a href="https://support.metamask.io/more-web3/learn/the-ethereum-address-format-and-why-it-matters-when-using-metamask/" target="_blank" rel="noopener">MetaMask — formato do endereço Ethereum</a></li>
           </ul>
