@@ -231,7 +231,7 @@ strong { font-weight: 600; color: var(--color-text-primary); }
 }
 
 .logo-text span {
-  color: var(--color-primary);
+  color: var(--color-green);
 }
 
 .main-nav {
