@@ -13,6 +13,8 @@
   --color-secondary-light: #16213E;
   --color-accent: #00D4AA;         /* Crypto Teal */
   --color-accent-dark: #00A88A;
+  --color-green: #00A65E;          /* Brand Green (money / up) */
+  --color-green-dark: #00874F;
 
   /* Neutral Palette */
   --color-bg: #FAFAFA;
