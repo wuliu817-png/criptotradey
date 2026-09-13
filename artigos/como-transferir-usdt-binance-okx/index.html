@@ -69,7 +69,7 @@
       },
       {
         "@type": "Question", "name": "A restrição de USDT na OKX (MiCA) vale para o Brasil?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Não. A restrição da MiCA vale para usuários da União Europeia e do Espaço Econômico Europeu. Ela não se aplica automaticamente a contas atendidas pela entidade brasileira da OKX. A disponibilidade de USDT e das redes deve ser confirmada na sua própria conta." }
+        "acceptedAnswer": { "@type": "Answer", "text": "A restrição europeia relacionada à MiCA se aplica aos usuários atendidos pela operação europeia da OKX no EEE. Para contas atendidas pela operação brasileira, essa regra europeia não se aplica da mesma forma. Ainda assim, confirme na sua própria conta se o depósito de USDT e a rede desejada estão disponíveis antes de transferir." }
       }
     ]
   }
@@ -196,7 +196,7 @@
           <p>Vá em <strong>Carteiras → Sacar → Criptomoeda</strong> e escolha <strong>USDT</strong>. É o mesmo caminho explicado em <a href="/artigos/como-sacar-usdt-binance/">como sacar USDT da Binance</a>.</p>
 
           <h3>4. Cole o endereço e selecione a mesma rede</h3>
-          <p>Cole o endereço copiado da OKX e <strong>selecione exatamente a mesma rede</strong> que você escolheu lá. Se na OKX você usou TRC20, na Binance selecione TRC20. Antes de continuar, releia o endereço inteiro — não só os primeiros e últimos caracteres — para não cair em erro de área de transferência.</p>
+          <p>Cole o endereço copiado da OKX e <strong>selecione exatamente a mesma rede</strong> que você escolheu lá. Se na OKX você usou TRC20, na Binance selecione TRC20. Antes de continuar, <strong>compare o endereço com o exibido originalmente na OKX</strong> e, em transferências de valor maior, considere fazer primeiro um envio de teste. Não confie apenas em endereços recuperados do histórico ou da área de transferência.</p>
 
           <h3>5. Confira taxa, mínimo e complete a verificação</h3>
           <p>Informe o valor e <strong>leia a taxa exibida</strong>, além do mínimo de saque. A Binance mostra esses números depois que você escolhe a moeda e a rede. Confirme a operação e complete a verificação de segurança (como o código 2FA).</p>
@@ -207,7 +207,7 @@
           <h2 id="mica-brasil">MiCA, Europa e Brasil: o que muda para você</h2>
           <p>Se você pesquisou esse assunto no Google ou no Bing, provavelmente encontrou páginas oficiais e artigos falando que <strong>o USDT “não pode ser negociado” ou “fica congelado” na OKX.</strong> Antes de se preocupar, entenda o contexto: <strong>essa restrição vale para a Europa, não para o Brasil.</strong></p>
           <p>O que aconteceu é o seguinte: a União Europeia criou uma regulação chamada <strong>MiCA</strong> para criptoativos. Como a emissora do USDT não tem a autorização exigida por essa regra, as corretoras que operam na Europa (incluindo a OKX Europa) limitaram a negociação de USDT para usuários da UE e do Espaço Econômico Europeu. Na Europa, usuários elegíveis podem depositar USDT para convertê-lo <strong>manualmente</strong> em USDC por meio da função USDT Convert — a conversão não acontece automaticamente.</p>
-          <p><strong>O Brasil está fora dessa regra.</strong> A restrição europeia da MiCA não se aplica automaticamente a contas atendidas pela entidade brasileira da OKX. A disponibilidade de USDT e das redes de depósito deve ser confirmada diretamente na conta do usuário. A confusão nas buscas vem de um motivo simples: as páginas de ajuda mais bem posicionadas falam da OKX Europa, não da OKX no Brasil.</p>
+          <p><strong>Para usuários atendidos pela operação brasileira da OKX, essa restrição europeia da MiCA não se aplica da mesma forma.</strong> A disponibilidade de USDT e das redes de depósito deve ser confirmada diretamente na conta do usuário. A confusão nas buscas vem de um motivo simples: as páginas de ajuda mais bem posicionadas falam da OKX Europa, não da OKX no Brasil.</p>
           <div style="margin:var(--space-5) 0;padding:var(--space-5);background:var(--color-surface);border-radius:var(--radius-md);border-left:4px solid var(--color-primary);">
             <p style="margin:0;font-size:var(--text-sm);color:var(--color-text-secondary);"><strong>Como confirmar:</strong> abra a página de depósito de USDT na sua OKX. Se o endereço e a rede aparecerem normalmente, sua conta não está sob a restrição europeia. O que vale é o que a sua própria conta exibe, não o que uma página genérica da Europa diz.</p>
           </div>
@@ -216,11 +216,12 @@
           <p>A rede certa é <strong>a que a OKX mostra como disponível para depósito de USDT no momento</strong> — e que você repete na Binance. Dentro das opções aceitas, o custo varia. A tabela abaixo compara a ordem de grandeza, não valores fixos.</p>
 
           <table style="width:100%; border-collapse:collapse; margin: var(--space-6) 0;">
-            <thead><tr style="background: var(--color-primary); color: #fff;"><th style="padding:12px;text-align:left;">Rede</th><th style="padding:12px;text-align:left;">Custo relativo no saque da Binance</th><th style="padding:12px;text-align:left;">O que saber</th></tr></thead>
+            <thead><tr style="background: var(--color-primary); color: #fff;"><th style="padding:12px;text-align:left;">Rede</th><th style="padding:12px;text-align:left;">Disponível na OKX?</th><th style="padding:12px;text-align:left;">Custo relativo no saque da Binance</th><th style="padding:12px;text-align:left;">O que saber</th></tr></thead>
             <tbody>
-              <tr><td style="padding:10px;"><strong>TRC20 (Tron)</strong></td><td style="padding:10px;">geralmente baixo</td><td style="padding:10px;">Opção comum para USDT entre corretoras; endereço começa com “T”</td></tr>
-              <tr><td style="padding:10px;"><strong>ERC20 (Ethereum)</strong></td><td style="padding:10px;">geralmente mais alto</td><td style="padding:10px;">Custo pode variar bastante; use se a OKX exibir essa rede para o depósito</td></tr>
-              <tr><td style="padding:10px;"><strong>Solana, Polygon e outras</strong></td><td style="padding:10px;">varia</td><td style="padding:10px;">Use somente se aparecer na página de depósito da sua conta OKX</td></tr>
+              <tr><td style="padding:10px;"><strong>TRC20 (Tron)</strong></td><td style="padding:10px;">Sim</td><td style="padding:10px;">geralmente baixo</td><td style="padding:10px;">Opção comum para USDT entre corretoras; endereço começa com “T”</td></tr>
+              <tr><td style="padding:10px;"><strong>ERC20 (Ethereum)</strong></td><td style="padding:10px;">Sim, quando exibida</td><td style="padding:10px;">geralmente mais alto</td><td style="padding:10px;">Custo pode variar bastante; use se a OKX exibir essa rede para o depósito</td></tr>
+              <tr><td style="padding:10px;"><strong>Solana, Polygon e outras</strong></td><td style="padding:10px;">Somente se aparecer na sua conta</td><td style="padding:10px;">varia</td><td style="padding:10px;">Use somente se aparecer na página de depósito da sua conta OKX</td></tr>
+              <tr><td style="padding:10px;"><strong>BSC/BEP20</strong></td><td style="padding:10px;">Não suportada atualmente para USDT</td><td style="padding:10px;">—</td><td style="padding:10px;">Não use para depósito de USDT na OKX; saldo pode não ser creditado</td></tr>
             </tbody>
           </table>
 
@@ -231,14 +232,14 @@
           <h2 id="tempo">Quanto tempo demora</h2>
           <p>O tempo depende principalmente da rede utilizada, do congestionamento da blockchain e do número de confirmações exigido pela OKX.</p>
           <p>Depois que a Binance processa o saque, a transação ainda precisa ser confirmada na blockchain antes de ser creditada pela OKX. O número necessário de confirmações varia conforme a rede e pode ser alterado pela plataforma.</p>
-          <p>Por isso, <strong>não use um número fixo de confirmações como referência.</strong> Antes de transferir, consulte a própria página de depósito da OKX, que mostra o requisito atual para aquela moeda e rede.</p>
+          <p>Por isso, <strong>não use um número fixo de confirmações como referência.</strong> Antes de transferir, consulte a própria página de depósito da OKX, que mostra o requisito atual para aquela moeda e rede. A própria OKX alerta que esse número varia por rede e deve ser consultado na página de depósito no momento da transferência.</p>
           <p>Se a Binance já mostrar o saque como concluído, mas o saldo ainda não tiver aparecido, abra o histórico de depósitos da OKX e consulte o TxID no explorador da blockchain. Uma transação enviada não significa necessariamente que o número de confirmações exigido pela OKX já foi atingido.</p>
 
           <h2 id="erros">Erros comuns ao transferir entre corretoras</h2>
           <ol>
             <li><strong>Escolher uma rede na OKX e outra na Binance.</strong> É o erro que mais gera perda. Se a OKX gerou um endereço TRC20 e você saca pela ERC20, o saldo pode não aparecer.</li>
             <li><strong>Confundir o formato do endereço com a rede.</strong> Redes diferentes podem ter endereços parecidos — como os que começam com “0x”. Confirme o nome da rede, não só o prefixo do endereço.</li>
-            <li><strong>Checar só o começo e o fim do endereço.</strong> Existem golpes de “address poisoning” que colocam um endereço parecido no seu histórico. Releia o endereço inteiro.</li>
+            <li><strong>Copiar um endereço do histórico sem confirmar a origem.</strong> Existem golpes de “address poisoning” que colocam um endereço parecido no seu histórico. Compare o endereço com o exibido originalmente na OKX antes de confirmar.</li>
             <li><strong>Enviar um valor abaixo do mínimo de depósito da OKX.</strong> A Binance pode permitir, mas a OKX pode não creditar. Confira os dois mínimos.</li>
             <li><strong>Pular o teste com valor pequeno.</strong> Na primeira vez, mande uma quantia baixa para confirmar que todo o fluxo funciona antes de mover valores maiores.</li>
           </ol>
@@ -274,7 +275,7 @@
           </div>
           <div class="faq-item">
             <h3>A restrição de USDT na OKX (MiCA) vale para o Brasil?</h3>
-            <p>Não. A restrição da MiCA vale para usuários da União Europeia e do Espaço Econômico Europeu. Contas no Brasil operam fora dessa regra, e o USDT segue disponível. Confirme apenas se a sua conta não pertence a uma entidade europeia.</p>
+            <p>A restrição europeia relacionada à MiCA se aplica aos usuários atendidos pela operação europeia da OKX no EEE. Para contas atendidas pela operação brasileira, essa regra europeia não se aplica da mesma forma. Ainda assim, confirme na sua própria conta se o depósito de USDT e a rede desejada estão disponíveis antes de transferir.</p>
           </div>
 
         </div>
