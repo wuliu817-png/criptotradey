@@ -1269,6 +1269,7 @@ strong { font-weight: 600; color: var(--color-text-primary); }
   align-items: center;
   justify-content: center;
   font-size: var(--text-xl);
+  color: var(--color-primary);
 }
 
 .contact-form {
@@ -1539,7 +1540,9 @@ strong { font-weight: 600; color: var(--color-text-primary); }
 }
 
 .entry-card-icon {
-  font-size: var(--text-3xl);
+  width: 32px;
+  height: 32px;
+  color: var(--color-primary);
   margin-bottom: var(--space-3);
   display: block;
 }
@@ -1672,7 +1675,9 @@ strong { font-weight: 600; color: var(--color-text-primary); }
 }
 
 .trust-card-icon {
-  font-size: var(--text-2xl);
+  width: 28px;
+  height: 28px;
+  color: var(--color-primary);
   margin-bottom: var(--space-3);
   display: block;
 }
