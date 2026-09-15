@@ -137,7 +137,7 @@
   <main id="main-content">
     <section class="page-header" style="background:linear-gradient(135deg,rgba(99,102,241,0.2) 0%,rgba(99,102,241,0.08) 40%,rgba(22,33,62,0.1) 100%);">
       <div class="container">
-        <h1>📝 Estimador de Imposto Cripto</h1>
+        <h1>Estimador de Imposto Cripto</h1>
         <p>Faça uma estimativa educacional do imposto sobre seus lucros com criptomoedas — e veja quando a custódia no exterior muda a regra</p>
       </div>
     </section>
@@ -164,11 +164,11 @@
             <input type="number" id="monthlyVolume" value="25000" min="0" step="100" placeholder="Ex: 25000">
             <span class="hint">Soma de TODAS as vendas de cripto neste mês. Se for sua única venda, use o mesmo valor acima.</span>
           </div>
-          <button class="btn-calculate" onclick="calculateTax()">💰 Calcular Imposto</button>
+          <button class="btn-calculate" onclick="calculateTax()">Calcular Imposto</button>
         </div>
 
         <div>
-          <h2 style="margin-bottom:var(--space-5);">📊 Resultado</h2>
+          <h2 style="margin-bottom:var(--space-5);">Resultado</h2>
           <div class="results" id="results">
             <p style="color:var(--color-text-secondary);text-align:center;padding:var(--space-8);">Preencha os dados e clique em <strong>Calcular Imposto</strong>.</p>
           </div>
@@ -176,7 +176,7 @@
       </div>
 
       <div class="rules-box">
-        <h3>📋 Regras do Imposto sobre Criptomoedas (2026)</h3>
+        <h3>Regras do Imposto sobre Criptomoedas (2026)</h3>
         <table class="comparison-table" style="width:100%;border-collapse:collapse;margin-top:var(--space-4);font-size:var(--text-sm);">
           <thead><tr style="background:var(--color-primary);color:#fff;"><th style="padding:10px;text-align:left;">Regra</th><th style="padding:10px;text-align:left;">Detalhe</th></tr></thead>
           <tbody>
@@ -253,7 +253,7 @@
         <div class="result-row"><span class="result-label">Imposto a Pagar (DARF)</span><span class="result-value ${taxDue > 0 ? 'red' : 'green'}">${formatBRL(taxDue)}</span></div>
         <div style="margin-top:var(--space-4);padding:var(--space-3);background:${taxDue > 0 ? '#fff3cd' : '#d4edda'};border-radius:var(--radius-md);font-size:var(--text-sm);">
           ${taxDue > 0
-            ? `<strong>📅 Ação necessária:</strong> Gere o DARF no site da Receita Federal e pague até o último dia útil do mês seguinte. Código de receita: <strong>4600</strong> (Ganho de Capital na Alienação de Bens).`
+            ? `<strong>Ação necessária:</strong> Gere o DARF no site da Receita Federal e pague até o último dia útil do mês seguinte. Código de receita: <strong>4600</strong> (Ganho de Capital na Alienação de Bens).`
             : `<strong>✅ Sem ação imediata.</strong> Mas não esqueça de declarar seus criptoativos no IR anual se o valor total for superior a R$ 5.000.`
           }
         </div>
