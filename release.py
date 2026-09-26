@@ -96,8 +96,8 @@ def extract_lastmod(abs_path, url, old_lastmod_map):
     """提取 lastmod（YYYY-MM-DD），优先级：
 
     1. 页面 schema JSON-LD 里的 dateModified（文章的真实修改日）
-    2. 旧 sitemap.xml 里的 lastmod（非文章页，保留手写值）
-    3. 文件 mtime（全新页面）
+    2. 文件 mtime（无 dateModified 的非文章页，如首页/枢纽页，随文件改动自动推进）
+    3. 旧 sitemap.xml 里更晚的 lastmod 兜底，避免 lastmod「回退」
     """
     result = None
     try:
@@ -108,12 +108,19 @@ def extract_lastmod(abs_path, url, old_lastmod_map):
     except Exception:
         pass
 
-    # 保留旧 sitemap 里更晚的 lastmod，避免 lastmod「回退」
     old = old_lastmod_map.get(f"{BASE_URL}{url}")
-    if old and (result is None or old > result):
-        result = old
+    mtime = _mtime(abs_path)
 
-    return result or _mtime(abs_path)
+    # 有 dateModified 的文章页：以 schema 为准，用旧 sitemap 更晚值兜底防回退
+    if result is not None:
+        if old and old > result:
+            result = old
+        return result
+
+    # 无 dateModified 的非文章页：用文件 mtime，同样用旧值兜底防回退
+    if old and old > mtime:
+        return old
+    return mtime
 
 
 def classify(url):
